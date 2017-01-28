@@ -27,7 +27,7 @@ public class CTDBlock extends Block implements ItemModelProvider, BlockRenderReg
 	@Override
 	public void registerItemModel(Item itemBlock) 
 	{
-		Main.proxy.registerItemRenderer(itemBlock, 0, name);
+		Main.proxy.registerItemRenderer(modid, itemBlock, 0, name);
 	}
 	@Override
 	public void reg(Block block) 
