@@ -10,12 +10,12 @@ import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class RegisterBlock 
 {
-	public static CTDBlock fuelwitherblock;
+	public static CTDBlock ctdblock;
 	public static void init()
 	{
-		 fuelwitherblock = register(new CTDBlock(Material.WOOD, "testblock", Main.MODID));
+		ctdblock = register(new CTDBlock(Material.WOOD, "ctdblock", Main.MODID));
 	}
-	private static <T extends Block> T register (T block, ItemBlock itemBlock) 
+	public static <T extends Block> T register (T block, ItemBlock itemBlock) 
 	 {
 		 GameRegistry.register(block);
 		 if(itemBlock != null) 
@@ -28,7 +28,7 @@ public class RegisterBlock
 		 }
 		 return block;
 	 }
-	 private static <T extends Block> T register(T block) 
+	public static <T extends Block> T register(T block) 
 	 {
 		 ItemBlock itemBlock = new ItemBlock(block);
 		 itemBlock.setRegistryName(block.getRegistryName());

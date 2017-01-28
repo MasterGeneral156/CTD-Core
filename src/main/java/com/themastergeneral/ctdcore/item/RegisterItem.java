@@ -7,12 +7,12 @@ import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class RegisterItem 
 {
-	public static CTDItem corecombat;
+	public static CTDItem ctdtest;
 	public static void init()
 	{
-		corecombat = register(new CTDItem ("corecombat"));
+		ctdtest = register(new CTDItem ("ctdtest"));
 	}
-	private static <T extends Item> T register(T item) 
+	public static <T extends Item> T register(T item) 
 	{
 		GameRegistry.register(item);
 		if(item instanceof ItemModelProvider) 
