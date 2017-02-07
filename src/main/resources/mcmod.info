@@ -3,7 +3,7 @@
   "modid": "ctdcore",
   "name": "CTD Core",
   "description": "A core mod file for CTD mods so I don't have to repeat code.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "mcversion": "1.10.2",
   "url": "",
   "updateUrl": "",
