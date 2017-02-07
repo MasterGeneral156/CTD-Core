@@ -10,10 +10,9 @@ import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class RegisterBlock 
 {
-	public static CTDBlock ctdblock;
 	public static void init()
 	{
-		ctdblock = register(new CTDBlock(Material.WOOD, "ctdblock", Main.MODID));
+		
 	}
 	public static <T extends Block> T register (T block, ItemBlock itemBlock) 
 	 {
