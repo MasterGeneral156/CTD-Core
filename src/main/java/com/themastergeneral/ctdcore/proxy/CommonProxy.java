@@ -4,6 +4,7 @@ import com.themastergeneral.ctdcore.block.RegisterBlock;
 import com.themastergeneral.ctdcore.item.RegisterItem;
 
 import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
