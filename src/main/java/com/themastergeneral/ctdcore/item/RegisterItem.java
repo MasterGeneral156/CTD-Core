@@ -8,9 +8,10 @@ import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class RegisterItem 
 {
+	public static CTDItem ctdtest;
 	public static void init()
 	{
-		
+		ctdtest = register(new CTDItem ("ctdtest",Main.MODID));
 	}
 	public static <T extends Item> T register(T item) 
 	{
