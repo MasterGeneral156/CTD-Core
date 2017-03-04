@@ -21,7 +21,6 @@ public class CTDBlock extends Block implements ItemModelProvider, BlockRenderReg
 		this.modid = modid;
 		this.setUnlocalizedName(name);
 		this.setRegistryName(name);
-		
 	}
 
 	@Override

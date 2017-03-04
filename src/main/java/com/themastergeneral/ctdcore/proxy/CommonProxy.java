@@ -1,25 +1,27 @@
 package com.themastergeneral.ctdcore.proxy;
 
+import com.themastergeneral.ctdcore.block.RegisterBlock;
+import com.themastergeneral.ctdcore.fluid.RegisterFluid;
+import com.themastergeneral.ctdcore.item.RegisterItem;
+
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import com.themastergeneral.ctdcore.block.RegisterBlock;
-import com.themastergeneral.ctdcore.item.RegisterItem;
-import com.themastergeneral.ctdcore.test.TestStuff;
-
 public class CommonProxy 
 {
 	public void preInit(FMLPreInitializationEvent e) 
-    {
+    {	
 		RegisterItem.init();
 		RegisterBlock.init();
+		RegisterFluid.init();
     }
     public void init(FMLInitializationEvent e) 
     {
-    	MinecraftForge.EVENT_BUS.register(new TestStuff());
+    	
     }
     public void postInit(FMLPostInitializationEvent e) 
     {

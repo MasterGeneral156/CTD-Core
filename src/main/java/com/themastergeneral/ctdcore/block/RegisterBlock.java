@@ -7,9 +7,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.themastergeneral.ctdcore.Main;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
+import com.themastergeneral.ctdcore.fluid.CTDFluid;
 
 public class RegisterBlock 
-{;
+{
 	public static void init()
 	{
 		
