@@ -6,7 +6,7 @@
   "version": "1.0.3",
   "mcversion": "1.10.2",
   "url": "https://minecraft.curseforge.com/projects/ctd-core",
-  "updateUrl": "",
+  "updateUrl": "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json",
   "authorList": ["TheMasterGeneral"],
   "credits": "",
   "logoFile": "",
