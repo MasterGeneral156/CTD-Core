@@ -2,6 +2,7 @@ package com.themastergeneral.ctdcore;
 
 import com.themastergeneral.ctdcore.proxy.CommonProxy;
 
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -15,7 +16,7 @@ public class Main
 {
 	public static final String MODID = "ctdcore";
     public static final String MODNAME = "CTD Core";
-    public static final String VERSION = "1.0.2";
+    public static final String VERSION = "1.0.3";
     public static final String updateJSON = "https://dl.dropboxusercontent.com/u/72961306/TMG%20Assets/Update%20JSONs/CTD-Core.json";
     public static final String acceptedMinecraftVersions = "1.11.2";
     
@@ -24,6 +25,10 @@ public class Main
     
     @Instance
     public static Main instance = new Main();
+    static 
+    {
+    	FluidRegistry.enableUniversalBucket();
+    }
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) 
