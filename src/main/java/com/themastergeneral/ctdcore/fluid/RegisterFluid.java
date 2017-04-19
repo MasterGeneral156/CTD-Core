@@ -21,14 +21,8 @@ import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class RegisterFluid 
 {
-	//public static Fluid test_fluid;
-	
-	//public static Block block_test_fluid;
 	public static void init()
 	{
-		//test_fluid = registerFluid("test_fluid", "block_test_fluid", EnumRarity.UNCOMMON, Main.MODID);
-		
-		//block_test_fluid = registerFluidBlock(test_fluid, Material.WATER, "test_fluid", Main.MODID);
 	}
 	private static Fluid registerFluid(String fluidName, String fluidTextureName, EnumRarity rarity, String modid)
 	{
