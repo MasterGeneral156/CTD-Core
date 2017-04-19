@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import com.themastergeneral.ctdcore.block.RegisterBlock;
 import com.themastergeneral.ctdcore.fluid.RegisterFluid;
 import com.themastergeneral.ctdcore.item.RegisterItem;
-import com.themastergeneral.ctdcore.test.TestStuff;
 
 public class CommonProxy 
 {
