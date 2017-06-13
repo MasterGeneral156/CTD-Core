@@ -1,5 +1,7 @@
 package com.themastergeneral.ctdcore;
 
+import org.apache.logging.log4j.Logger;
+
 import com.themastergeneral.ctdcore.proxy.CommonProxy;
 
 import net.minecraftforge.fluids.FluidRegistry;
@@ -16,7 +18,7 @@ public class Main
 {
 	public static final String MODID = "ctdcore";
     public static final String MODNAME = "CTD Core";
-    public static final String VERSION = "1.1.0";
+    public static final String VERSION = "1.1.1";
     public static final String updateJSON = "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json";
     public static final String acceptedMinecraftVersions = "1.12";
     
@@ -25,6 +27,7 @@ public class Main
     
     @Instance
     public static Main instance = new Main();
+    public static Logger logger;
     static 
     {
     	FluidRegistry.enableUniversalBucket();
@@ -33,6 +36,8 @@ public class Main
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) 
     {
+    	logger = e.getModLog();
+    	logger.info("Starting CTD Core.");
     	proxy.preInit(e);
     }
     @EventHandler
@@ -45,5 +50,6 @@ public class Main
     public void postInit(FMLPostInitializationEvent e) 
     {
     	proxy.postInit(e);
+    	logger.info("Loaded CTD Core.");
     }
 }
