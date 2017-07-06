@@ -3,7 +3,7 @@
   "modid": "ctdcore",
   "name": "CTD Core",
   "description": "A core mod file for CTD mods so I don't have to repeat code.",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "mcversion": "1.12",
   "url": "https://minecraft.curseforge.com/projects/ctd-core",
   "updateUrl": "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json",

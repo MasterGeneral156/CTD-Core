@@ -112,4 +112,13 @@ public class WorldHelper
         Vec3d vec31 = vec3.addVector((double)f6*distance, (double)f5*distance, (double)f7*distance);
         return world.rayTraceBlocks(vec3, vec31, p1, p2, p3);
     }
+	public static RayTraceResult getNearestBlockWithDefaultReachDistance(World world, EntityPlayer player)
+	{
+        return getNearestBlockWithDefaultReachDistance(world, player, false, true, false);
+    }
+
+    public static RayTraceResult getNearestBlockWithDefaultReachDistance(World world, EntityPlayer player, boolean stopOnLiquids, boolean ignoreBlockWithoutBoundingBox, boolean returnLastUncollidableBlock)
+    {
+        return getMovingObjectPosWithReachDistance(world, player, player instanceof EntityPlayerMP ? ((EntityPlayerMP)player).interactionManager.getBlockReachDistance() : 5.0D, stopOnLiquids, ignoreBlockWithoutBoundingBox, returnLastUncollidableBlock);
+    }
 }
