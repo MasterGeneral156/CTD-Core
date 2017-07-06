@@ -8,13 +8,14 @@ import net.minecraft.item.EnumRarity;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
+import com.themastergeneral.ctdcore.Main;
 import com.themastergeneral.ctdcore.block.CTDBlockFlowing;
 
 public class RegisterFluid 
 {
 	public static void init()
 	{
-		
+		registerFluid("meme", "meme", EnumRarity.COMMON, Main.MODID);
 	}
 	private static Fluid registerFluid(String fluidName, String fluidTextureName, EnumRarity rarity, String modid)
 	{
