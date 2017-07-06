@@ -23,7 +23,7 @@ public class Main
 {
 	public static final String MODID = "ctdcore";
     public static final String MODNAME = "CTD Core";
-    public static final String VERSION = "1.1.4";
+    public static final String VERSION = "1.1.5";
     public static final String updateJSON = "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json";
     public static final String acceptedMinecraftVersions = "1.12";
     

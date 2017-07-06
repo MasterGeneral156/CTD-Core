@@ -15,7 +15,7 @@ public class RegisterFluid
 {
 	public static void init()
 	{
-		registerFluid("meme", "meme", EnumRarity.COMMON, Main.MODID);
+		
 	}
 	private static Fluid registerFluid(String fluidName, String fluidTextureName, EnumRarity rarity, String modid)
 	{
