@@ -1,2 +1,4 @@
 # CTD-Core
-A core file so I don't have to repeat code.
+A library mod for CTD Mods. This handles model registration and other mod magic.  
+# CurseForge
+https://minecraft.curseforge.com/projects/ctd-core
