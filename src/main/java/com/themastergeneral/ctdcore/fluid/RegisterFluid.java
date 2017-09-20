@@ -11,22 +11,19 @@ import net.minecraftforge.fluids.FluidRegistry;
 import com.themastergeneral.ctdcore.Main;
 import com.themastergeneral.ctdcore.block.CTDBlockFlowing;
 
-public class RegisterFluid 
-{
-	public static void init()
-	{
-		
-	}
-	private static Fluid registerFluid(String fluidName, String fluidTextureName, EnumRarity rarity, String modid)
-	{
-        Fluid fluid = new CTDFluid(fluidName.toLowerCase(Locale.ROOT), fluidTextureName, modid).setRarity(rarity);
-        FluidRegistry.registerFluid(fluid);
-        FluidRegistry.addBucketForFluid(fluid);
+public class RegisterFluid {
+	private static Fluid registerFluid(String fluidName,
+			String fluidTextureName, EnumRarity rarity, String modid) {
+		Fluid fluid = new CTDFluid(fluidName.toLowerCase(Locale.ROOT),
+				fluidTextureName, modid).setRarity(rarity);
+		FluidRegistry.registerFluid(fluid);
+		FluidRegistry.addBucketForFluid(fluid);
 
-        return FluidRegistry.getFluid(fluid.getName());
-    }
-	public static Block registerFluidBlock(Fluid fluid, Material material, String name, String modid)
-	{
+		return FluidRegistry.getFluid(fluid.getName());
+	}
+
+	public static Block registerFluidBlock(Fluid fluid, Material material,
+			String name, String modid) {
 		return new CTDBlockFlowing(fluid, material, name, modid);
 	}
 }

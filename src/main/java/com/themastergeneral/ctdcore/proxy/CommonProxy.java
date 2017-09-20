@@ -10,24 +10,19 @@ import com.themastergeneral.ctdcore.block.RegisterBlock;
 import com.themastergeneral.ctdcore.fluid.RegisterFluid;
 import com.themastergeneral.ctdcore.item.RegisterItem;
 
-public class CommonProxy 
-{
-	public void preInit(FMLPreInitializationEvent e) 
-    {
-		RegisterItem.init();
-		RegisterBlock.init();
-		RegisterFluid.init();
-    }
-    public void init(FMLInitializationEvent e) 
-    {
-    	
-    }
-    public void postInit(FMLPostInitializationEvent e) 
-    {
+public class CommonProxy {
+	public void preInit(FMLPreInitializationEvent e) {
+	}
 
-    }
-    public void registerItemRenderer(String mod,Item item, int meta, String id)
-    {
-    	 
-    }
+	public void init(FMLInitializationEvent e) {
+
+	}
+
+	public void postInit(FMLPostInitializationEvent e) {
+
+	}
+
+	public void registerItemRenderer(String mod, Item item, int meta, String id) {
+
+	}
 }
