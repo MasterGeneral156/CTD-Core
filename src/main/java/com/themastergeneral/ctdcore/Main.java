@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class Main {
 	public static final String MODID = "ctdcore";
 	public static final String MODNAME = "CTD Core";
-	public static final String VERSION = "1.1.8";
+	public static final String VERSION = "1.1.9";
 	public static final String updateJSON = "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json";
 	public static final String acceptedMinecraftVersions = "1.12.2";
 
@@ -36,13 +36,13 @@ public class Main {
 	public void preInit(FMLPreInitializationEvent e) {
 		logger = e.getModLog();
 		logger.info("Starting CTD Core.");
-		logger.info("Hey Mojang, fuck you! I'm removing your Java Edition thing! -TMG");
 		proxy.preInit(e);
 	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent e) {
 		proxy.init(e);
+		logger.warn("Hey Mojang, fuck you! I'm removing your Java Edition thing! -TMG");
 	}
 
 	@Mod.EventHandler
