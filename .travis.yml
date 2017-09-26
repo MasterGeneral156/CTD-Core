@@ -1,7 +1,11 @@
 language: java
-jdk: oraclejdk8
+jdk:
+  - oraclejdk8
 
 sudo: required
 
-install: "./gradlew setupCIWorkspace"
-script: "./gradlew build"
+jobs:
+  include:
+    - stage: build
+      install: ./gradlew setupCiWorkspace
+      script: ./gradlew build 
