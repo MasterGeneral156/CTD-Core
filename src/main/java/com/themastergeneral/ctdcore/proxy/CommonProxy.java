@@ -1,17 +1,29 @@
 package com.themastergeneral.ctdcore.proxy;
 
+import java.io.File;
+
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.themastergeneral.ctdcore.block.RegisterBlock;
+import com.themastergeneral.ctdcore.config.CTDCoreConfig;
+import com.themastergeneral.ctdcore.events.CTDCoreEventHandler;
 import com.themastergeneral.ctdcore.fluid.RegisterFluid;
 import com.themastergeneral.ctdcore.item.RegisterItem;
 
 public class CommonProxy {
+	public static Configuration config;
+
 	public void preInit(FMLPreInitializationEvent e) {
+		File directory = e.getModConfigurationDirectory();
+		config = new Configuration(new File(directory.getPath(),
+				"ctd/ctdcore.cfg"));
+		CTDCoreConfig.readConfig();
+		CTDCoreEventHandler.loadEvents();
 	}
 
 	public void init(FMLInitializationEvent e) {
