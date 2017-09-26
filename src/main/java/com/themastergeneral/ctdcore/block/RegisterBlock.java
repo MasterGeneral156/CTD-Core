@@ -6,7 +6,6 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.themastergeneral.ctdcore.Main;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class RegisterBlock {

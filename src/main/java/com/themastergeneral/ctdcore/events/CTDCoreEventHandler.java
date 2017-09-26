@@ -2,7 +2,7 @@ package com.themastergeneral.ctdcore.events;
 
 import net.minecraftforge.common.MinecraftForge;
 
-import com.themastergeneral.ctdcore.Main;
+import com.themastergeneral.ctdcore.CTDCore;
 import com.themastergeneral.ctdcore.config.CTDCoreConfig;
 
 public class CTDCoreEventHandler {
@@ -10,7 +10,7 @@ public class CTDCoreEventHandler {
 	{
 		if (CTDCoreConfig.disableTMGDrop == false)
 		{
-			Main.logger.info("Loading TMG's head drop");
+			CTDCore.logger.info("Loading TMG's head drop");
 			MinecraftForge.EVENT_BUS.register(new TMGHeadDrop());
 		}
 	}

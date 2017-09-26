@@ -1,10 +1,10 @@
 package com.themastergeneral.ctdcore.config;
 
-import org.apache.logging.log4j.Level;
-
 import net.minecraftforge.common.config.Configuration;
 
-import com.themastergeneral.ctdcore.Main;
+import org.apache.logging.log4j.Level;
+
+import com.themastergeneral.ctdcore.CTDCore;
 import com.themastergeneral.ctdcore.proxy.CommonProxy;
 
 public class CTDCoreConfig {
@@ -17,7 +17,7 @@ public class CTDCoreConfig {
 			cfg.load();
 			initGeneralConfig(cfg);
 		} catch (Exception e1) {
-			Main.logger.log(Level.ERROR, "Problem loading config file!", e1);
+			CTDCore.logger.log(Level.ERROR, "Problem loading config file!", e1);
 		} finally {
 			if (cfg.hasChanged()) {
 				cfg.save();

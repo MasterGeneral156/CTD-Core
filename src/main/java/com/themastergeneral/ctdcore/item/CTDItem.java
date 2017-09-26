@@ -5,10 +5,10 @@
 
 package com.themastergeneral.ctdcore.item;
 
-import com.themastergeneral.ctdcore.Main;
-import com.themastergeneral.ctdcore.client.ItemModelProvider;
-
 import net.minecraft.item.Item;
+
+import com.themastergeneral.ctdcore.CTDCore;
+import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class CTDItem extends Item implements ItemModelProvider {
 	protected String name;	//Name of the item.
@@ -22,7 +22,7 @@ public class CTDItem extends Item implements ItemModelProvider {
 	}
 
 	public void registerItemModel(Item item) {
-		Main.proxy.registerItemRenderer(modid, this, 0, name);
+		CTDCore.proxy.registerItemRenderer(modid, this, 0, name);
 	}
 
 }

@@ -8,7 +8,6 @@ import net.minecraft.item.EnumRarity;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
-import com.themastergeneral.ctdcore.Main;
 import com.themastergeneral.ctdcore.block.CTDBlockFlowing;
 
 public class RegisterFluid {

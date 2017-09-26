@@ -12,7 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
-import com.themastergeneral.ctdcore.Main;
+import com.themastergeneral.ctdcore.CTDCore;
 import com.themastergeneral.ctdcore.client.BlockRenderRegister;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
@@ -32,7 +32,7 @@ public class CTDBlockFlowing extends BlockFluidClassic implements
 
 	@Override
 	public void registerItemModel(Item itemBlock) {
-		Main.proxy.registerItemRenderer(modid, itemBlock, 0, name);
+		CTDCore.proxy.registerItemRenderer(modid, itemBlock, 0, name);
 	}
 
 	@Override
