@@ -1,3 +1,8 @@
+/*
+ * Extend this class, and use register() to register your items
+ * Example: basicitem = register(new CTDItem("basicitem", Main.MODID));
+ */
+
 package com.themastergeneral.ctdcore.item;
 
 import net.minecraft.item.Item;

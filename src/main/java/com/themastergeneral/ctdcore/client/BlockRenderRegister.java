@@ -1,3 +1,7 @@
+/*
+ * Implement this class in your block class if you wish for your blocks to have models!
+ */
+
 package com.themastergeneral.ctdcore.client;
 
 import net.minecraft.block.Block;

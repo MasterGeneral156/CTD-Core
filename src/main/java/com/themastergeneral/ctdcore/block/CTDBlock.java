@@ -12,8 +12,8 @@ import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class CTDBlock extends Block implements ItemModelProvider,
 		BlockRenderRegister {
-	protected String name;
-	protected String modid;
+	protected String name;	//Block's registry name
+	protected String modid;	//Mod ID to look for the model.
 
 	public CTDBlock(Material materialIn, String name, String modid) {
 		super(materialIn);

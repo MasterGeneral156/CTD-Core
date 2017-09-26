@@ -1,3 +1,7 @@
+/*
+ * Do not use this class. I don't remember how this works exactly lol.
+ */
+
 package com.themastergeneral.ctdcore.block;
 
 import net.minecraft.block.Block;
