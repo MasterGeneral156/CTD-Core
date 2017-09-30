@@ -1,3 +1,7 @@
+/*
+ * Helper class to help with world based stuff.
+ */
+
 package com.themastergeneral.ctdcore.helpers;
 
 import net.minecraft.block.Block;

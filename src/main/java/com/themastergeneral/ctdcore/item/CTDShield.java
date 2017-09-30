@@ -1,26 +1,25 @@
-/*
- * You will want to extend this class to create a basic item.
- * This class calls the item registerer.
- */
-
 package com.themastergeneral.ctdcore.item;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemShield;
 
 import com.themastergeneral.ctdcore.CTDCore;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
-public class CTDItem extends Item implements ItemModelProvider {
-	protected String name;	//Name of the item.
-	protected String modid;	//Mod ID domain to look for textures/models.
-	
-	public CTDItem(String name, String modid) {
+public class CTDShield extends ItemShield implements ItemModelProvider {
+
+	protected String name; // Name of the item.
+	protected String modid; // Mod ID domain to look for textures/models.
+
+	public CTDShield(String name, String modid, int maxdurability) {
 		this.name = name;
 		this.modid = modid;
+		this.setMaxDamage(maxdurability);
 		this.setUnlocalizedName(name);
 		this.setRegistryName(name);
 	}
 
+	@Override
 	public void registerItemModel(Item item) {
 		CTDCore.proxy.registerItemRenderer(modid, this, 0, name);
 	}

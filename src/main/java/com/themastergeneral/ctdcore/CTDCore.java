@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CTDCore {
 	public static final String MODID = "ctdcore";
 	public static final String MODNAME = "CTD Core";
-	public static final String VERSION = "1.2";
+	public static final String VERSION = "1.2.1";
 	public static final String updateJSON = "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json";
 	public static final String acceptedMinecraftVersions = "1.12.2";
 

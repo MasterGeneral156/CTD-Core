@@ -1,3 +1,7 @@
+/*
+ * Extend this class to add a basic block to the game.
+ */
+
 package com.themastergeneral.ctdcore.block;
 
 import net.minecraft.block.Block;
@@ -12,8 +16,8 @@ import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class CTDBlock extends Block implements ItemModelProvider,
 		BlockRenderRegister {
-	protected String name;	//Block's registry name
-	protected String modid;	//Mod ID to look for the model.
+	protected String name; // Block's registry name
+	protected String modid; // Mod ID to look for the model.
 
 	public CTDBlock(Material materialIn, String name, String modid) {
 		super(materialIn);

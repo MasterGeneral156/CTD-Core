@@ -1,3 +1,7 @@
+/*
+ * This isn't for mod devs. This is for TMG. Fuck off, yo!
+ */
+
 package com.themastergeneral.ctdcore.config;
 
 import net.minecraftforge.common.config.Configuration;

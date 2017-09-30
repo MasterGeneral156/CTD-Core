@@ -1,3 +1,6 @@
+/*
+ * Helper class for dealing with item stacks.
+ */
 package com.themastergeneral.ctdcore.helpers;
 
 import net.minecraft.item.ItemStack;
