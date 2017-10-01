@@ -6,18 +6,15 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import com.themastergeneral.ctdcore.Main;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
-public class RegisterItem 
-{
-	public static void init()
-	{
-		
+public class RegisterItem {
+	public static void init() {
+
 	}
-	public static <T extends Item> T register(T item) 
-	{
+
+	public static <T extends Item> T register(T item) {
 		GameRegistry.register(item);
-		if(item instanceof ItemModelProvider) 
-		{
-			((ItemModelProvider)item).registerItemModel(item);
+		if (item instanceof ItemModelProvider) {
+			((ItemModelProvider) item).registerItemModel(item);
 		}
 		return item;
 	}

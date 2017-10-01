@@ -11,24 +11,22 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-public class CommonProxy 
-{
-	public void preInit(FMLPreInitializationEvent e) 
-    {	
+public class CommonProxy {
+	public void preInit(FMLPreInitializationEvent e) {
 		RegisterItem.init();
 		RegisterBlock.init();
 		RegisterFluid.init();
-    }
-    public void init(FMLInitializationEvent e) 
-    {
-    	
-    }
-    public void postInit(FMLPostInitializationEvent e) 
-    {
+	}
 
-    }
-    public void registerItemRenderer(String mod,Item item, int meta, String id)
-    {
-    	 
-    }
+	public void init(FMLInitializationEvent e) {
+
+	}
+
+	public void postInit(FMLPostInitializationEvent e) {
+
+	}
+
+	public void registerItemRenderer(String mod, Item item, int meta, String id) {
+
+	}
 }

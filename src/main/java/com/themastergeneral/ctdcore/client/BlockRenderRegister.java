@@ -7,7 +7,6 @@ import net.minecraft.item.Item;
 
 import com.themastergeneral.ctdcore.Main;
 
-public interface BlockRenderRegister
-{
+public interface BlockRenderRegister {
 	void reg(Block block);
 }
