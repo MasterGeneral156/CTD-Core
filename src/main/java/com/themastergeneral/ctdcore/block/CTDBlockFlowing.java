@@ -1,8 +1,7 @@
+/*
+ * Do not use this class. I don't remember how this works exactly lol.
+ */
 package com.themastergeneral.ctdcore.block;
-
-import com.themastergeneral.ctdcore.Main;
-import com.themastergeneral.ctdcore.client.BlockRenderRegister;
-import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,10 +11,14 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 
+import com.themastergeneral.ctdcore.CTDCore;
+import com.themastergeneral.ctdcore.client.BlockRenderRegister;
+import com.themastergeneral.ctdcore.client.ItemModelProvider;
+
 public class CTDBlockFlowing extends BlockFluidClassic implements
 		ItemModelProvider, BlockRenderRegister {
-	protected String name;
-	protected String modid;
+	protected String name; // Block name
+	protected String modid; // Mod ID to look for the block's model.
 
 	public CTDBlockFlowing(Fluid fluid, Material material, String name,
 			String modid) {
@@ -28,7 +31,7 @@ public class CTDBlockFlowing extends BlockFluidClassic implements
 
 	@Override
 	public void registerItemModel(Item itemBlock) {
-		Main.proxy.registerItemRenderer(modid, itemBlock, 0, name);
+		CTDCore.proxy.registerItemRenderer(modid, itemBlock, 0, name);
 	}
 
 	@Override

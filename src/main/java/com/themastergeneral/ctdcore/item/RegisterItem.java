@@ -3,7 +3,6 @@ package com.themastergeneral.ctdcore.item;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.themastergeneral.ctdcore.Main;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class RegisterItem {

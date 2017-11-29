@@ -1,23 +1,17 @@
+/*
+ * Extend #RegisterFluid to register your fluids.
+ */
 package com.themastergeneral.ctdcore.fluid;
 
 import java.util.Locale;
 
-import org.apache.logging.log4j.Level;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fml.common.FMLLog;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
-import com.themastergeneral.ctdcore.Main;
 import com.themastergeneral.ctdcore.block.CTDBlockFlowing;
-import com.themastergeneral.ctdcore.block.RegisterBlock;
-import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class RegisterFluid {
 	public static void init() {

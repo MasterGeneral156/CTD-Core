@@ -4,8 +4,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 
 public class CTDFluid extends Fluid {
-	protected String name;
-	protected String modid;
+	protected String name; // Fluid's registry name
+	protected String modid; // Mod ID to look for its texture.
 
 	public CTDFluid(String fluidName, String textureName, String modid) {
 		super(fluidName, new ResourceLocation(modid, "blocks/" + textureName
