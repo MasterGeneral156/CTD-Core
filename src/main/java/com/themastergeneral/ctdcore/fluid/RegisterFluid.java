@@ -1,3 +1,6 @@
+/*
+ * Extend #RegisterFluid to register your fluids.
+ */
 package com.themastergeneral.ctdcore.fluid;
 
 import java.util.Locale;
@@ -12,7 +15,6 @@ import com.themastergeneral.ctdcore.block.CTDBlockFlowing;
 
 public class RegisterFluid {
 	public static void init() {
-
 	}
 
 	private static Fluid registerFluid(String fluidName,
