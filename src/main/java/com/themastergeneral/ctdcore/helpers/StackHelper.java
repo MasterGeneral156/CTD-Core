@@ -11,10 +11,9 @@ public class StackHelper {
 	}
 
 	public static int getStackSize(ItemStack stack) {
-		if (!isValid(stack)) {
+		if (!isValid(stack))
 			return 0;
-		} else {
+		else
 			return stack.getCount();
-		}
 	}
 }
