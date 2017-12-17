@@ -13,7 +13,6 @@ import com.themastergeneral.ctdcore.proxy.CommonProxy;
 
 public class CTDCoreConfig {
 	private static final String CATEGORY_GENERAL = "General";
-	public static boolean disableTMGDrop = false;
 
 	public static void readConfig() {
 		Configuration cfg = CommonProxy.config;
@@ -30,11 +29,5 @@ public class CTDCoreConfig {
 	}
 
 	private static void initGeneralConfig(Configuration cfg) {
-		disableTMGDrop = cfg
-				.getBoolean(
-						"Disable TheMasterGeneral's Drop",
-						CATEGORY_GENERAL,
-						disableTMGDrop,
-						"Everytime you kill TheMasterGeneral, he will drop his head when this is enabled.");
 	}
 }
