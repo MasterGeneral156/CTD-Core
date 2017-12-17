@@ -11,7 +11,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.themastergeneral.ctdcore.block.RegisterBlock;
 import com.themastergeneral.ctdcore.config.CTDCoreConfig;
-import com.themastergeneral.ctdcore.events.CTDCoreEventHandler;
 import com.themastergeneral.ctdcore.fluid.RegisterFluid;
 import com.themastergeneral.ctdcore.item.RegisterItem;
 
@@ -23,7 +22,6 @@ public class CommonProxy {
 		config = new Configuration(new File(directory.getPath(),
 				"ctd/ctdcore.cfg"));
 		CTDCoreConfig.readConfig();
-		CTDCoreEventHandler.loadEvents();
 	}
 
 	public void init(FMLInitializationEvent e) {
