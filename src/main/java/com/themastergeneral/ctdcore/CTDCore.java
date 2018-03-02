@@ -19,10 +19,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CTDCore {
 	public static final String MODID = "ctdcore";
 	public static final String MODNAME = "CTD Core";
-	public static final String VERSION = "1.2.4";
+	public static final String VERSION = "1.2.5";
 	public static final String updateJSON = "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json";
 	public static final String acceptedMinecraftVersions = "1.12.2";
-	public static final String certificateFingerprint = "441b509a0f58a0ef41aca8daf1be20d96287635e";
+	public static final String certificateFingerprint = "1cd8befc36d6dedc5601d77a013f43afc71f899f";
 
 	@SidedProxy(clientSide = "com.themastergeneral.ctdcore.proxy.ClientProxy", serverSide = "com.themastergeneral.ctdcore.proxy.ServerProxy")
 	public static CommonProxy proxy;
@@ -44,7 +44,6 @@ public class CTDCore {
 	@EventHandler
 	public void init(FMLInitializationEvent e) {
 		proxy.init(e);
-		logger.warn("Hey Mojang, fuck you! I'm removing your Java Edition thing! -TMG");
 	}
 
 	@EventHandler
