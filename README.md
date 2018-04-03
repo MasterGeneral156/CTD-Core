@@ -1,4 +1,4 @@
-# CTD-Core
+# CTD Core [![](http://cf.way2muchnoise.eu/full_ctd-core_downloads.svg)](https://minecraft.curseforge.com/projects/ctd-core) [![](http://cf.way2muchnoise.eu/versions/ctd-core.svg)](https://minecraft.curseforge.com/projects/ctd-core)
 A library mod for CTD Mods. This handles model registration and other mod magic.  
 ## CurseForge 
 https://minecraft.curseforge.com/projects/ctd-core  
