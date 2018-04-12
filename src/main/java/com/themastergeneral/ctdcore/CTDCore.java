@@ -19,10 +19,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CTDCore {
 	public static final String MODID = "ctdcore";
 	public static final String MODNAME = "CTD Core";
-	public static final String VERSION = "1.3.0";
+	public static final String VERSION = "1.3.1";
 	public static final String updateJSON = "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json";
 	public static final String acceptedMinecraftVersions = "1.12.2";
-	public static final String certificateFingerprint = "1cd8befc36d6dedc5601d77a013f43afc71f899f";
+	public static final String certificateFingerprint = "5101015479fe39f20b47f365472250d312a50a57";
 
 	@SidedProxy(clientSide = "com.themastergeneral.ctdcore.proxy.ClientProxy", serverSide = "com.themastergeneral.ctdcore.proxy.ServerProxy")
 	public static CommonProxy proxy;
