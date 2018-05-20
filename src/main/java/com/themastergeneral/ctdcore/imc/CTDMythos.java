@@ -36,38 +36,6 @@ public class CTDMythos {
 				toSend);
 	}
 
-	public static final void addInventoryCraft(ItemStack input,
-			ItemStack offhand, ItemStack output) {
-		if (input == null || output == null || offhand == null) {
-			return;
-		}
-		NBTTagCompound toSend = new NBTTagCompound();
-		toSend.setTag("input", new NBTTagCompound());
-		toSend.setTag("offhand", new NBTTagCompound());
-		toSend.setTag("output", new NBTTagCompound());
-		input.writeToNBT(toSend.getCompoundTag("input"));
-		offhand.writeToNBT(toSend.getCompoundTag("offhand"));
-		output.writeToNBT(toSend.getCompoundTag("output"));
-		FMLInterModComms.sendMessage("ctdmythos", "add_main_offhand_craft",
-				toSend);
-	}
-
-	public static final void removeInventoryCraft(ItemStack input,
-			ItemStack offhand, ItemStack output) {
-		if (input == null || output == null || offhand == null) {
-			return;
-		}
-		NBTTagCompound toSend = new NBTTagCompound();
-		toSend.setTag("input", new NBTTagCompound());
-		toSend.setTag("offhand", new NBTTagCompound());
-		toSend.setTag("output", new NBTTagCompound());
-		input.writeToNBT(toSend.getCompoundTag("input"));
-		offhand.writeToNBT(toSend.getCompoundTag("offhand"));
-		output.writeToNBT(toSend.getCompoundTag("output"));
-		FMLInterModComms.sendMessage("ctdmythos", "remove_main_offhand_craft",
-				toSend);
-	}
-
 	public static final void addPedestalCraft(ItemStack input, ItemStack output) {
 		if (input == null || output == null) {
 			return;
