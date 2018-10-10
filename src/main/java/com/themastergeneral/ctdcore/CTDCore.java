@@ -19,7 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CTDCore {
 	public static final String MODID = "ctdcore";
 	public static final String MODNAME = "CTD Core";
-	public static final String VERSION = "1.4.0";
+	public static final String VERSION = "1.4.1";
 	public static final String updateJSON = "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json";
 	public static final String acceptedMinecraftVersions = "1.12.2";
 	public static final String certificateFingerprint = "b50fe22651b9d97d9d6631514a6a57cd6174b0dc";
@@ -54,6 +54,6 @@ public class CTDCore {
 
 	@EventHandler
 	public void onFingerprintViolation(FMLFingerprintViolationEvent e) {
-		FMLLog.warning("Invalid fingerprint detected for CTD Core! TheMasterGeneral will not support this version!");
+		FMLLog.severe("Invalid fingerprint detected for CTD Core! TheMasterGeneral will not support this version!");
 	}
 }
