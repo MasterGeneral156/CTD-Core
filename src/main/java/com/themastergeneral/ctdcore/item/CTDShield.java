@@ -15,8 +15,6 @@ public class CTDShield extends ItemShield implements ItemModelProvider {
 	public CTDShield(String name, String modid, int maxdurability) {
 		this.name = name;
 		this.modid = modid;
-		this.setMaxDamage(maxdurability);
-		this.setUnlocalizedName(name);
 		this.setRegistryName(name);
 	}
 
@@ -25,7 +23,6 @@ public class CTDShield extends ItemShield implements ItemModelProvider {
 		CTDCore.proxy.registerItemRenderer(modid, this, 0, name);
 	}
 	
-	@Override
 	public String getItemStackDisplayName(ItemStack stack)
     {
 		return "item." + name + ".name";

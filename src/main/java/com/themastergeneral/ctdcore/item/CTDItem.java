@@ -17,7 +17,6 @@ public class CTDItem extends Item implements ItemModelProvider {
 	public CTDItem(String name, String modid) {
 		this.name = name;
 		this.modid = modid;
-		this.setUnlocalizedName(name);
 		this.setRegistryName(name);
 	}
 

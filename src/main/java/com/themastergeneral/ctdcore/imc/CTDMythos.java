@@ -2,6 +2,7 @@ package com.themastergeneral.ctdcore.imc;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
 
 public class CTDMythos {
@@ -17,10 +18,10 @@ public class CTDMythos {
 		toSend.setTag("flighttime", new NBTTagCompound());
 		toSend.setTag("resistance", new NBTTagCompound());
 		toSend.setTag("flightmod", new NBTTagCompound());
-		input.writeToNBT(toSend.getCompoundTag("input"));
-		toSend.setInteger("flighttime", flighttime);
-		toSend.setInteger("resistance", resistance);
-		toSend.setInteger("flightmod", flightmultiplier);
+		input.write(toSend.getCompound("input"));
+		toSend.setInt("flighttime", flighttime);
+		toSend.setInt("resistance", resistance);
+		toSend.setInt("flightmod", flightmultiplier);
 		FMLInterModComms.sendMessage("ctdmythos", "add_flight_wand_item",
 				toSend);
 	}
@@ -31,8 +32,8 @@ public class CTDMythos {
 		}
 		NBTTagCompound toSend = new NBTTagCompound();
 		toSend.setTag("input", new NBTTagCompound());
-		input.writeToNBT(toSend.getCompoundTag("input"));
-		FMLInterModComms.sendMessage("ctdmythos", "remove_flight_wand_item",
+		input.write(toSend.getCompound("input"));
+		InterModComms.sendTo("ctdmythos", "remove_flight_wand_item",
 				toSend);
 	}
 
@@ -43,8 +44,8 @@ public class CTDMythos {
 		NBTTagCompound toSend = new NBTTagCompound();
 		toSend.setTag("input", new NBTTagCompound());
 		toSend.setTag("output", new NBTTagCompound());
-		input.writeToNBT(toSend.getCompoundTag("input"));
-		output.writeToNBT(toSend.getCompoundTag("output"));
+		input.write(toSend.getCompound("input"));
+		output.write(toSend.getCompound("output"));
 		FMLInterModComms.sendMessage("ctdmythos", "add_mb_craft", toSend);
 	}
 
@@ -56,8 +57,8 @@ public class CTDMythos {
 		NBTTagCompound toSend = new NBTTagCompound();
 		toSend.setTag("input", new NBTTagCompound());
 		toSend.setTag("output", new NBTTagCompound());
-		input.writeToNBT(toSend.getCompoundTag("input"));
-		output.writeToNBT(toSend.getCompoundTag("output"));
+		input.write(toSend.getCompound("input"));
+		output.write(toSend.getCompound("output"));
 		FMLInterModComms.sendMessage("ctdmythos", "remove_mb_craft", toSend);
 	}
 }
