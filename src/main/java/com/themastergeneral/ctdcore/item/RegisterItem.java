@@ -5,10 +5,10 @@
 
 package com.themastergeneral.ctdcore.item;
 
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
-
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
+
+import net.minecraft.item.Item;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class RegisterItem {
 	public static <T extends Item> T register(T item) {

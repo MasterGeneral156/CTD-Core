@@ -7,7 +7,7 @@ package com.themastergeneral.ctdcore.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
 import com.themastergeneral.ctdcore.CTDCore;
@@ -19,11 +19,10 @@ public class CTDBlock extends Block implements ItemModelProvider,
 	protected String name; // Block's registry name
 	protected String modid; // Mod ID to look for the model.
 
-	public CTDBlock(Material materialIn, String name, String modid) {
+	public CTDBlock(Properties materialIn, String name, String modid) {
 		super(materialIn);
 		this.name = name;
 		this.modid = modid;
-		this.setUnlocalizedName(name);
 		this.setRegistryName(name);
 
 	}
@@ -35,15 +34,12 @@ public class CTDBlock extends Block implements ItemModelProvider,
 
 	@Override
 	public void reg(Block block) {
-		Minecraft
-				.getMinecraft()
-				.getRenderItem()
+		Minecraft.getInstance().getItemRenderer()
 				.getItemModelMesher()
 				.register(
-						Item.getItemFromBlock(block),
-						0,
+						Item.getItemFromBlock(block), 
 						new ModelResourceLocation(modid + ":"
-								+ block.getUnlocalizedName().substring(5),
+								+ block.getRegistryName(),
 								"inventory"));
 	}
 }

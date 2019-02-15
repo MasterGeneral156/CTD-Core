@@ -17,7 +17,6 @@ public class CTDArrow extends ItemArrow implements ItemModelProvider {
 	public CTDArrow(String name, String modid) {
 		this.name = name;
 		this.modid = modid;
-		this.setUnlocalizedName(name);
 		this.setRegistryName(name);
 	}
 

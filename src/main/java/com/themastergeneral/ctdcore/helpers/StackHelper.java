@@ -3,9 +3,13 @@
  */
 package com.themastergeneral.ctdcore.helpers;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.ForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 
 public class StackHelper {
 	
@@ -24,6 +28,6 @@ public class StackHelper {
 	
 	//Example: minecraft:air
 	public static Item itemFromRegistryName(String name) {
-		return Item.REGISTRY.getObject(new ResourceLocation(name));
+		return Items.AIR;
 	}
 }

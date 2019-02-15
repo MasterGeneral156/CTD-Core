@@ -6,19 +6,18 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public abstract class CTDTEBase<TE extends TileEntity> extends CTDBlock {
+public abstract class CTDTEBase<TE extends TileEntity, IBlockAccess> extends CTDBlock {
 
-	public CTDTEBase(Material material, String name, String ModID) {
+	public CTDTEBase(Properties material, String name, String ModID) {
 		super(material, name, ModID);
 	}
 	
 	public abstract Class<TE> getTileEntityClass();
 	
 	public TE getTileEntity(IBlockAccess world, BlockPos pos) {
-		return (TE)world.getTileEntity(pos);
+		return (TE)((World) world).getTileEntity(pos);
 	}
 	
 	@Override
@@ -27,7 +26,6 @@ public abstract class CTDTEBase<TE extends TileEntity> extends CTDBlock {
 	}
 	
 	@Nullable
-	@Override
 	public abstract TE createTileEntity(World world, IBlockState state);
 
 }

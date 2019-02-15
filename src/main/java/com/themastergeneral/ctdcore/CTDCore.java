@@ -1,59 +1,37 @@
 package com.themastergeneral.ctdcore;
 
-import org.apache.logging.log4j.Logger;
-
 import com.themastergeneral.ctdcore.proxy.CommonProxy;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLFingerprintViolationEvent;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(modid = CTDCore.MODID, name = CTDCore.MODNAME, version = CTDCore.VERSION, acceptedMinecraftVersions = CTDCore.acceptedMinecraftVersions, updateJSON = CTDCore.updateJSON, certificateFingerprint = CTDCore.certificateFingerprint)
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+@Mod("ctdcore")
 public class CTDCore {
-	public static final String MODID = "ctdcore";
-	public static final String MODNAME = "CTD Core";
-	public static final String VERSION = "1.4.1";
-	public static final String updateJSON = "https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json";
-	public static final String acceptedMinecraftVersions = "1.13";
-	public static final String certificateFingerprint = "b50fe22651b9d97d9d6631514a6a57cd6174b0dc";
-
-	@SidedProxy(clientSide = "com.themastergeneral.ctdcore.proxy.ClientProxy", serverSide = "com.themastergeneral.ctdcore.proxy.ServerProxy")
 	public static CommonProxy proxy;
+	private static final Logger LOGGER = LogManager.getLogger();
 
-	@Instance
-	public static CTDCore instance = new CTDCore();
 	public static Logger logger;
 	static {
 		FluidRegistry.enableUniversalBucket();
 	}
+	public CTDCore() {
+        // Register the setup method for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 
-	@EventHandler
-	public void preInit(FMLPreInitializationEvent e) {
-		logger = e.getModLog();
-		logger.info("Starting CTD Core.");
-		proxy.preInit(e);
-	}
+        // Register ourselves for server, registry and other game events we are interested in
+        MinecraftForge.EVENT_BUS.register(this);
+    }
+	
+	private void setup(final FMLCommonSetupEvent event)
+    {
+        // some preinit code
+		LOGGER.info("CTD Core is launching.");
+    }
 
-	@EventHandler
-	public void init(FMLInitializationEvent e) {
-		proxy.init(e);
-	}
-
-	@EventHandler
-	public void postInit(FMLPostInitializationEvent e) {
-		proxy.postInit(e);
-		logger.info("Loaded CTD Core.");
-	}
-
-	@EventHandler
-	public void onFingerprintViolation(FMLFingerprintViolationEvent e) {
-		FMLLog.severe("Invalid fingerprint detected for CTD Core! TheMasterGeneral will not support this version!");
-	}
 }

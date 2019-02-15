@@ -21,8 +21,6 @@ public class CTDBow extends ItemBow implements ItemModelProvider {
 		this.name = name;
 		this.modid = modid;
 		this.drawspeed = drawspeed;
-		this.setUnlocalizedName(name);
-		this.setMaxDamage(maxdurability);
 		this.setRegistryName(name);
 	}
 
@@ -32,7 +30,6 @@ public class CTDBow extends ItemBow implements ItemModelProvider {
 
 	}
 
-	@Override
 	public int getMaxItemUseDuration(ItemStack stack) {
 		return drawspeed;
 	}
