@@ -9,7 +9,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
 
 import com.themastergeneral.ctdcore.CTDCore;
-import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class CTDItem extends Item {
 	protected String name;	//Name of the item.

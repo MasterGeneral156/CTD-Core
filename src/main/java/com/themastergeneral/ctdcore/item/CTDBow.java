@@ -9,7 +9,6 @@ import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 
 import com.themastergeneral.ctdcore.CTDCore;
-import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class CTDBow extends ItemBow {
 	protected String name; // Name of the item.

@@ -8,7 +8,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArrow;
 
 import com.themastergeneral.ctdcore.CTDCore;
-import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class CTDArrow extends ItemArrow {
 	

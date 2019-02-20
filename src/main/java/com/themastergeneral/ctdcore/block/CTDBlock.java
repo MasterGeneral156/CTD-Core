@@ -11,8 +11,6 @@ import net.minecraft.client.renderer.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 
 import com.themastergeneral.ctdcore.CTDCore;
-import com.themastergeneral.ctdcore.client.BlockRenderRegister;
-import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class CTDBlock extends Block {
 	protected String name; // Block's registry name

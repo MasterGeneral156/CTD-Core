@@ -11,8 +11,6 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fluids.Fluid;
 
 import com.themastergeneral.ctdcore.CTDCore;
-import com.themastergeneral.ctdcore.client.BlockRenderRegister;
-import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class CTDBlockFlowing /*extends BlockFluidClassic*/ {
 	protected String name;

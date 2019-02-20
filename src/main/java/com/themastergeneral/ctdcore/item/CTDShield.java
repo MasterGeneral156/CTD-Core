@@ -5,7 +5,6 @@ import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
 
 import com.themastergeneral.ctdcore.CTDCore;
-import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
 public class CTDShield extends ItemShield {
 
