@@ -14,8 +14,7 @@ import com.themastergeneral.ctdcore.CTDCore;
 import com.themastergeneral.ctdcore.client.BlockRenderRegister;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
-public class CTDBlock extends Block implements ItemModelProvider,
-		BlockRenderRegister {
+public class CTDBlock extends Block {
 	protected String name; // Block's registry name
 	protected String modid; // Mod ID to look for the model.
 
@@ -23,23 +22,7 @@ public class CTDBlock extends Block implements ItemModelProvider,
 		super(materialIn);
 		this.name = name;
 		this.modid = modid;
-		this.setRegistryName(name);
+		this.setRegistryName(modid, name);
 
-	}
-
-	@Override
-	public void registerItemModel(Item itemBlock) {
-		CTDCore.proxy.registerItemRenderer(modid, itemBlock, 0, name);
-	}
-
-	@Override
-	public void reg(Block block) {
-		Minecraft.getInstance().getItemRenderer()
-				.getItemModelMesher()
-				.register(
-						Item.getItemFromBlock(block), 
-						new ModelResourceLocation(modid + ":"
-								+ block.getRegistryName(),
-								"inventory"));
 	}
 }

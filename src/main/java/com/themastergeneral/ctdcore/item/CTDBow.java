@@ -11,23 +11,17 @@ import net.minecraft.item.ItemStack;
 import com.themastergeneral.ctdcore.CTDCore;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
-public class CTDBow extends ItemBow implements ItemModelProvider {
+public class CTDBow extends ItemBow {
 	protected String name; // Name of the item.
 	protected String modid; // Mod ID domain to look for textures/models.
 	protected int drawspeed; // How long it should take to draw the bow
 								// completely.
-
-	public CTDBow(String name, String modid, int drawspeed, int maxdurability) {
+	public CTDBow(Properties builder,String name, String modid, int drawspeed, int maxdurability) {
+		super(builder.defaultMaxDamage(maxdurability));
 		this.name = name;
 		this.modid = modid;
 		this.drawspeed = drawspeed;
-		this.setRegistryName(name);
-	}
-
-	@Override
-	public void registerItemModel(Item item) {
-		CTDCore.proxy.registerItemRenderer(modid, this, 0, name);
-
+		this.setRegistryName(modid, name);
 	}
 
 	public int getMaxItemUseDuration(ItemStack stack) {

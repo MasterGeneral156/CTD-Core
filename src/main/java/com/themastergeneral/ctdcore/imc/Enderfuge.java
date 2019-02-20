@@ -1,11 +1,13 @@
+/*
+ * Most IMC isn't working yet. Will fix later.
+ */
 package com.themastergeneral.ctdcore.imc;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraftforge.fml.common.event.FMLInterModComms;
 
 public class Enderfuge {
-	public static final void addSmelt(ItemStack input, ItemStack output,
+	/*public static final void addSmelt(ItemStack input, ItemStack output,
 			float xp) {
 		if (input == null || output == null) {
 			return;
@@ -52,5 +54,5 @@ public class Enderfuge {
 
 		FMLInterModComms
 				.sendMessage("enderfuge", "removeenderfugefuel", toSend);
-	}
+	}*/
 }

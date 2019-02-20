@@ -7,7 +7,6 @@ package com.themastergeneral.ctdcore.config;
 import org.apache.logging.log4j.Level;
 
 import com.themastergeneral.ctdcore.CTDCore;
-import com.themastergeneral.ctdcore.proxy.CommonProxy;
 
 public class CTDCoreConfig {
 	private static final String CATEGORY_GENERAL = "General";

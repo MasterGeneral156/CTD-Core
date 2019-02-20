@@ -1,13 +1,16 @@
+/*
+ * Most IMC isn't working yet. Will fix later.
+ */
+
 package com.themastergeneral.ctdcore.imc;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.InterModComms;
-import net.minecraftforge.fml.common.event.FMLInterModComms;
 
 public class CTDMythos {
 
-	public static final void addFlightItem(ItemStack input, int flighttime,
+	/*public static final void addFlightItem(ItemStack input, int flighttime,
 			int flightmultiplier, int resistance) {
 		if (input == null || flighttime < 0 || flightmultiplier < 0
 				|| resistance < 0) {
@@ -60,5 +63,5 @@ public class CTDMythos {
 		input.write(toSend.getCompound("input"));
 		output.write(toSend.getCompound("output"));
 		FMLInterModComms.sendMessage("ctdmythos", "remove_mb_craft", toSend);
-	}
+	}*/
 }

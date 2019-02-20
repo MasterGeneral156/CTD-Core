@@ -4,7 +4,7 @@ import net.minecraft.item.ItemStack;
 
 public class IMCHelper {
 
-	public static final void addFlightItem(ItemStack input, int flighttime,
+	/*public static final void addFlightItem(ItemStack input, int flighttime,
 			int flightmultiplier, int resistance) {
 		CTDMythos
 				.addFlightItem(input, flighttime, flightmultiplier, resistance);
@@ -39,5 +39,5 @@ public class IMCHelper {
 
 	public static final void removeEnderfugeFuel(ItemStack input) {
 		Enderfuge.removeFuel(input);
-	}
+	}*/
 }

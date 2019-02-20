@@ -6,22 +6,20 @@
 package com.themastergeneral.ctdcore.item;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.Properties;
 
 import com.themastergeneral.ctdcore.CTDCore;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
-public class CTDItem extends Item implements ItemModelProvider {
+public class CTDItem extends Item {
 	protected String name;	//Name of the item.
 	protected String modid;	//Mod ID domain to look for textures/models.
 	
-	public CTDItem(String name, String modid) {
-		this.name = name;
-		this.modid = modid;
-		this.setRegistryName(name);
-	}
-
-	public void registerItemModel(Item item) {
-		CTDCore.proxy.registerItemRenderer(modid, this, 0, name);
+	public CTDItem(Properties properties, String name, String modid) {
+		super(properties);
+		this.setRegistryName(modid, name);
+		this.name=name;
+		this.modid=modid;
 	}
 
 }

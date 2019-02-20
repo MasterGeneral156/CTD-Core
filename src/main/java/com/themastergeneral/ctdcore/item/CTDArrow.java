@@ -10,20 +10,16 @@ import net.minecraft.item.ItemArrow;
 import com.themastergeneral.ctdcore.CTDCore;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
-public class CTDArrow extends ItemArrow implements ItemModelProvider {
+public class CTDArrow extends ItemArrow {
+	
 	protected String name; // Name of the item.
 	protected String modid; // Mod ID domain to look for textures/models.
-
-	public CTDArrow(String name, String modid) {
+	
+	public CTDArrow(Properties builder, String name, String modid) {
+		super(builder);
 		this.name = name;
 		this.modid = modid;
-		this.setRegistryName(name);
-	}
-
-	@Override
-	public void registerItemModel(Item item) {
-		CTDCore.proxy.registerItemRenderer(modid, this, 0, name);
-
+		this.setRegistryName(modid, name);
 	}
 
 }

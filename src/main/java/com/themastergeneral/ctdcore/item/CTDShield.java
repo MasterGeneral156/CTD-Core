@@ -7,20 +7,16 @@ import net.minecraft.item.ItemStack;
 import com.themastergeneral.ctdcore.CTDCore;
 import com.themastergeneral.ctdcore.client.ItemModelProvider;
 
-public class CTDShield extends ItemShield implements ItemModelProvider {
+public class CTDShield extends ItemShield {
 
 	protected String name; // Name of the item.
 	protected String modid; // Mod ID domain to look for textures/models.
-
-	public CTDShield(String name, String modid, int maxdurability) {
+	
+	public CTDShield(Properties builder, String name, String modid, int maxdurability) {
+		super(builder.defaultMaxDamage(maxdurability));
 		this.name = name;
 		this.modid = modid;
-		this.setRegistryName(name);
-	}
-
-	@Override
-	public void registerItemModel(Item item) {
-		CTDCore.proxy.registerItemRenderer(modid, this, 0, name);
+		this.setRegistryName(modid, name);
 	}
 	
 	public String getItemStackDisplayName(ItemStack stack)
