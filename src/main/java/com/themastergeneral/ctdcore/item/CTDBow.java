@@ -4,13 +4,13 @@
 
 package com.themastergeneral.ctdcore.item;
 
+import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 
 import com.themastergeneral.ctdcore.CTDCore;
 
-public class CTDBow extends ItemBow {
+public class CTDBow extends BowItem {
 	protected String name; // Name of the item.
 	protected String modid; // Mod ID domain to look for textures/models.
 	protected int drawspeed; // How long it should take to draw the bow

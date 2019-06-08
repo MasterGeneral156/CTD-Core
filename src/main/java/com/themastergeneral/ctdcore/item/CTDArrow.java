@@ -4,12 +4,11 @@
 
 package com.themastergeneral.ctdcore.item;
 
+import net.minecraft.item.ArrowItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArrow;
-
 import com.themastergeneral.ctdcore.CTDCore;
 
-public class CTDArrow extends ItemArrow {
+public class CTDArrow extends ArrowItem {
 	
 	protected String name; // Name of the item.
 	protected String modid; // Mod ID domain to look for textures/models.

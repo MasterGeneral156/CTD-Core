@@ -1,12 +1,12 @@
 package com.themastergeneral.ctdcore.item;
 
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemShield;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ShieldItem;
 
 import com.themastergeneral.ctdcore.CTDCore;
 
-public class CTDShield extends ItemShield {
+public class CTDShield extends ShieldItem {
 
 	protected String name; // Name of the item.
 	protected String modid; // Mod ID domain to look for textures/models.

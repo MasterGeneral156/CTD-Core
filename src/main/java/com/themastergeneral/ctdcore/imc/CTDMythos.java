@@ -5,7 +5,6 @@
 package com.themastergeneral.ctdcore.imc;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fml.InterModComms;
 
 public class CTDMythos {

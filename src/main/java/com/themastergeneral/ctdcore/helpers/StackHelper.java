@@ -3,13 +3,9 @@
  */
 package com.themastergeneral.ctdcore.helpers;
 
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.ForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistryEntry;
+import net.minecraft.item.Items;
 
 public class StackHelper {
 	
