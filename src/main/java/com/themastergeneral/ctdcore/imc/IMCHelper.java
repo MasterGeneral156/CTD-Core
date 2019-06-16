@@ -1,7 +1,5 @@
 package com.themastergeneral.ctdcore.imc;
 
-import net.minecraft.item.ItemStack;
-
 public class IMCHelper {
 
 	/*public static final void addFlightItem(ItemStack input, int flighttime,

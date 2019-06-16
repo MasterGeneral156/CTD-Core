@@ -5,10 +5,7 @@
 package com.themastergeneral.ctdcore.item;
 
 import net.minecraft.item.BowItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-
-import com.themastergeneral.ctdcore.CTDCore;
 
 public class CTDBow extends BowItem {
 	protected String name; // Name of the item.

@@ -5,12 +5,6 @@
 package com.themastergeneral.ctdcore.block;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-
-import com.themastergeneral.ctdcore.CTDCore;
 
 public class CTDBlock extends Block {
 	protected String name; // Block's registry name

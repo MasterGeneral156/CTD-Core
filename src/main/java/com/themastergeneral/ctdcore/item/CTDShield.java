@@ -1,10 +1,7 @@
 package com.themastergeneral.ctdcore.item;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShieldItem;
-
-import com.themastergeneral.ctdcore.CTDCore;
 
 public class CTDShield extends ShieldItem {
 

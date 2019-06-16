@@ -3,12 +3,6 @@
  */
 package com.themastergeneral.ctdcore.helpers;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.registries.ForgeRegistry;
-import net.minecraftforge.registries.RegistryBuilder;
-
 public class ModUtils {
 	/*public static Item getOtherModItem(String fqrn) {
 		return Item.getByNameOrId(fqrn);

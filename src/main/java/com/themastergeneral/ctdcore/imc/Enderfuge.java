@@ -3,8 +3,6 @@
  */
 package com.themastergeneral.ctdcore.imc;
 
-import net.minecraft.item.ItemStack;
-
 public class Enderfuge {
 	/*public static final void addSmelt(ItemStack input, ItemStack output,
 			float xp) {

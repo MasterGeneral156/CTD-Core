@@ -4,9 +4,6 @@
 
 package com.themastergeneral.ctdcore.imc;
 
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.InterModComms;
-
 public class CTDMythos {
 
 	/*public static final void addFlightItem(ItemStack input, int flighttime,

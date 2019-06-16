@@ -4,13 +4,8 @@
 
 package com.themastergeneral.ctdcore.block;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.item.Item;
 import net.minecraftforge.fluids.Fluid;
-
-import com.themastergeneral.ctdcore.CTDCore;
 
 public class CTDBlockFlowing /*extends BlockFluidClassic*/ {
 	protected String name;

@@ -7,7 +7,7 @@ logoFile="textures/logo-new.png" #optional
 authors="TheMasterGeneral" #optional
 [[mods]] #mandatory
 modId="ctdcore" #mandatory
-version="2.0.2" #mandatory
+version="2.0.3" #mandatory
 displayName="CTD Core" #mandatory
 description='''
 A Library mod for mods created by TheMasterGeneral.'''

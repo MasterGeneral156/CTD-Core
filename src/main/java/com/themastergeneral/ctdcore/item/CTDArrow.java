@@ -5,8 +5,6 @@
 package com.themastergeneral.ctdcore.item;
 
 import net.minecraft.item.ArrowItem;
-import net.minecraft.item.Item;
-import com.themastergeneral.ctdcore.CTDCore;
 
 public class CTDArrow extends ArrowItem {
 	

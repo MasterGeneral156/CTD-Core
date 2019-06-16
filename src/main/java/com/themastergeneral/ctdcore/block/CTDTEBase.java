@@ -2,7 +2,6 @@ package com.themastergeneral.ctdcore.block;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -16,6 +15,7 @@ public abstract class CTDTEBase<TE extends TileEntity, IBlockAccess> extends CTD
 	
 	public abstract Class<TE> getTileEntityClass();
 	
+	@SuppressWarnings("unchecked")
 	public TE getTileEntity(IBlockAccess world, BlockPos pos) {
 		return (TE)((World) world).getTileEntity(pos);
 	}
