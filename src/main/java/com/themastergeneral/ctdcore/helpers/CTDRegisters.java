@@ -1,9 +1,15 @@
 package com.themastergeneral.ctdcore.helpers;
 
-public class CTDRegisters {
+import net.minecraft.world.World;
 
-	public static void doThis()
-	{
-		
+public class CTDRegisters {
+	public static boolean isClientWorld(World world) {
+		return world.isRemote;
+	}
+	public static boolean isServerWorld(World world) {
+		return !world.isRemote;
+	}
+	public static boolean isRaining(World world) {
+		return world.isRaining();
 	}
 }
