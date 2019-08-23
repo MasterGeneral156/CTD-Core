@@ -4,9 +4,10 @@ updateJSONURL="https://raw.githubusercontent.com/MasterGeneral156/Version/master
 issueTrackerURL="https://github.com/MasterGeneral156/CTD-Core/issues" #optional
 displayURL="https://minecraft.curseforge.com/projects/ctd-core" #optional
 authors="TheMasterGeneral" #optional
+logoFile="logo-new.png" #optional
 [[mods]] #mandatory
     modId="ctdcore" #mandatory
-    version="2.0.3" #mandatory
+    version="2.0.4" #mandatory
     displayName="CTD Core" #mandatory
     description="A Library mod for mods created by TheMasterGeneral."
 [[dependencies.ctdcore]]
