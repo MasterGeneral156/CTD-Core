@@ -32,7 +32,7 @@ public class CTDCore {
 	private void setup(final FMLCommonSetupEvent event)
     {
 		LOGGER.info("CTD Core is launching.");
-		LOGGER.warn("Please note that CTD Core is NOT feature complete. This is a VERY ALPHA BUILD.");
+		LOGGER.warn("Please note that CTD Core is NOT feature complete.");
     }
 
 }
