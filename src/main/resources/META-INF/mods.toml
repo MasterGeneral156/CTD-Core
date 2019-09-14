@@ -7,7 +7,7 @@ authors="TheMasterGeneral" #optional
 logoFile="logo-new.png" #optional
 [[mods]] #mandatory
     modId="ctdcore" #mandatory
-    version="2.0.4" #mandatory
+    version="2.0.5" #mandatory
     displayName="CTD Core" #mandatory
     description="A Library mod for mods created by TheMasterGeneral."
 [[dependencies.ctdcore]]
@@ -19,6 +19,6 @@ logoFile="logo-new.png" #optional
 [[dependencies.ctdcore]]
     modId = "forge"
     mandatory = true
-    versionRange = "[28,]"
+    versionRange = "[28.1,]"
     ordering = "NONE"
     side = "BOTH"
