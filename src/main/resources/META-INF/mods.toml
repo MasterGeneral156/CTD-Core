@@ -13,12 +13,12 @@ logoFile="logo-new.png" #optional
 [[dependencies.ctdcore]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "[1.14.4]"
+    versionRange = "[1.15.1]"
     ordering = "NONE"
     side = "BOTH"
 [[dependencies.ctdcore]]
     modId = "forge"
     mandatory = true
-    versionRange = "[28,]"
+    versionRange = "[30,]"
     ordering = "NONE"
     side = "BOTH"

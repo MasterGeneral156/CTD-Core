@@ -13,9 +13,9 @@ public class WorldHelper {
 
 	// Function used to find the block under an entity.
 	public static Block findBlockUnderEntity(Entity e) {
-		int blockX = MathHelper.floor(e.posX);
-		int blockY = MathHelper.floor(e.posY-0.2D - e.getYOffset());
-		int blockZ = MathHelper.floor(e.posZ);
+		int blockX = MathHelper.floor(e.serverPosX);
+		int blockY = MathHelper.floor(e.serverPosY-0.2D - e.getYOffset());
+		int blockZ = MathHelper.floor(e.serverPosZ);
 		BlockPos blockpos = new BlockPos(blockX, blockY, blockZ);
 		return e.world.getBlockState(blockpos).getBlock();
 	}
