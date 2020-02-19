@@ -1,5 +1,5 @@
 modLoader="javafml" #mandatory
-loaderVersion="[26,)" #mandatory
+loaderVersion="[31,)" #mandatory
 updateJSONURL="https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json" #optional
 issueTrackerURL="https://github.com/MasterGeneral156/CTD-Core/issues" #optional
 displayURL="https://minecraft.curseforge.com/projects/ctd-core" #optional
@@ -13,12 +13,12 @@ logoFile="logo-new.png" #optional
 [[dependencies.ctdcore]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "[1.15.1]"
+    versionRange = "[1.15.2]"
     ordering = "NONE"
     side = "BOTH"
 [[dependencies.ctdcore]]
     modId = "forge"
     mandatory = true
-    versionRange = "[30,]"
+    versionRange = "[31,]"
     ordering = "NONE"
     side = "BOTH"
