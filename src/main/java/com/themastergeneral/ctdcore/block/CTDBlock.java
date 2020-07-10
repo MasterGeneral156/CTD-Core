@@ -10,7 +10,8 @@ public class CTDBlock extends Block {
 	protected String name; // Block's registry name
 	protected String modid; // Mod ID to look for the model.
 
-	public CTDBlock(Properties materialIn, String name, String modid) {
+	public CTDBlock(Properties materialIn, String name, String modid) 
+	{
 		super(materialIn);
 		this.name = name;
 		this.modid = modid;
