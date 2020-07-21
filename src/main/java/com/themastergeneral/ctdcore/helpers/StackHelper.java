@@ -10,12 +10,14 @@ import net.minecraft.item.Items;
 public class StackHelper {
 	
 	//Valid stack?
-	public static boolean isValid(ItemStack stack) {
+	public static boolean isValid(ItemStack stack) 
+	{
 		return stack != null && !stack.isEmpty();
 	}
 
 	//Returns stack size... duh?
-	public static int getStackSize(ItemStack stack) {
+	public static int getStackSize(ItemStack stack) 
+	{
 		if (!isValid(stack))
 			return 0;
 		else
@@ -23,7 +25,8 @@ public class StackHelper {
 	}
 	
 	//Example: minecraft:air
-	public static Item itemFromRegistryName(String name) {
+	public static Item itemFromRegistryName(String name) 
+	{
 		return Items.AIR;
 	}
 }
