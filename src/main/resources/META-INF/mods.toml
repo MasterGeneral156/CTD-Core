@@ -8,6 +8,6 @@ logoFile="logo-new.png" #optional
 license="https://github.com/MasterGeneral156/CTD-Core/blob/1.16/LICENSE"
 [[mods]] #mandatory
     modId="ctdcore" #mandatory
-    version="2.0.6" #mandatory
+    version="2.1.0" #mandatory
     displayName="CTD Core" #mandatory
     description="A Library mod for mods created by TheMasterGeneral."
