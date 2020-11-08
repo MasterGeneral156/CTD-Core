@@ -37,7 +37,6 @@ public class CTDBlock extends Block {
 		super(materialIn);
 		this.name = name;
 		this.modid = modid;
-		this.setRegistryName(modid, name);
 
 	}
 }

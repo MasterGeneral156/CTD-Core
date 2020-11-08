@@ -39,7 +39,6 @@ public class CTDArrow extends ArrowItem {
 		super(builder);
 		this.name = name;
 		this.modid = modid;
-		this.setRegistryName(modid, name);
 	}
 
 }

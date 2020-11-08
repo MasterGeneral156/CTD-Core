@@ -31,14 +31,9 @@ package com.themastergeneral.ctdcore.item;
 import net.minecraft.item.Item;
 
 public class CTDItem extends Item {
-	protected String name;	//Name of the item.
-	protected String modid;	//Mod ID domain to look for textures/models.
 	
-	public CTDItem(Properties properties, String name, String modid) {
+	public CTDItem(Properties properties) {
 		super(properties);
-		this.setRegistryName(modid, name);
-		this.name=name;
-		this.modid=modid;
 	}
 
 }
