@@ -11,15 +11,3 @@ license="https://github.com/MasterGeneral156/CTD-Core/blob/1.16/LICENSE"
     version="2.0.6" #mandatory
     displayName="CTD Core" #mandatory
     description="A Library mod for mods created by TheMasterGeneral."
-[[dependencies.ctdcore]]
-    modId = "minecraft"
-    mandatory = true
-    versionRange = "[1.16.3]"
-    ordering = "NONE"
-    side = "BOTH"
-[[dependencies.ctdcore]]
-    modId = "forge"
-    mandatory = true
-    versionRange = "[34,]"
-    ordering = "NONE"
-    side = "BOTH"
