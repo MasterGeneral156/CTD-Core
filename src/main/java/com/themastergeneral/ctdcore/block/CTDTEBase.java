@@ -36,8 +36,8 @@ import net.minecraftforge.common.extensions.IForgeBlockState;
 
 public abstract class CTDTEBase<TE extends TileEntity, IBlockAccess> extends CTDBlock {
 
-	public CTDTEBase(Properties material, String name, String ModID) {
-		super(material, name, ModID);
+	public CTDTEBase(Properties material) {
+		super(material);
 	}
 	
 	public abstract Class<TE> getTileEntityClass();
