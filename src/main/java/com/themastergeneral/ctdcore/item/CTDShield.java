@@ -34,7 +34,7 @@ public class CTDShield extends ShieldItem {
 	
 	public CTDShield(Properties builder, int maxdurability) 
 	{
-		super(builder.defaultMaxDamage(maxdurability));
+		super(builder.defaultDurability(maxdurability));
 	}
 
 }

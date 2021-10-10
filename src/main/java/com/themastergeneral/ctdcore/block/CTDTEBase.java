@@ -44,7 +44,7 @@ public abstract class CTDTEBase<TE extends TileEntity, IBlockAccess> extends CTD
 	
 	@SuppressWarnings("unchecked")
 	public TE getTileEntity(IBlockAccess world, BlockPos pos) {
-		return (TE)((World) world).getTileEntity(pos);
+		return (TE)((World) world).getBlockEntity(pos);
 	}
 	
 	public boolean hasTileEntity(IForgeBlockState state) {
