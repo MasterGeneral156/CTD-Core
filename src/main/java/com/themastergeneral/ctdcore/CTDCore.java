@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 1.17
+	Project:	CTD Core 1.18
 	File:		com.themastergeneral.ctdcore.CTDCore
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
