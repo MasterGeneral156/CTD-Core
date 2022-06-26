@@ -36,13 +36,12 @@ import net.minecraft.util.math.MathHelper;
 public class WorldHelper 
 {
 	// Function used to find the block under an entity.
-	public static void findBlockUnderEntity(Entity e) 
+	public static Block findBlockUnderEntity(Entity e) 
 	{
 		int blockX = MathHelper.floor(e.getX());
 		int blockY = MathHelper.floor(e.getY()-0.2D - e.getEyeY());
 		int blockZ = MathHelper.floor(e.getZ());
 		BlockPos blockpos = new BlockPos(blockX, blockY, blockZ);
-		//return e.world.getBlockState(blockpos).getBlock();
-		//return e.world
+		return e.getCommandSenderWorld().getBlockState(blockpos).getBlock();
 	}
 }
