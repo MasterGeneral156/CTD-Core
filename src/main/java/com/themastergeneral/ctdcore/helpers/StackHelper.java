@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.16
+	Project:	CTD Core 1.17
 	File:		com.themastergeneral.ctdcore.helpers.StackHelper
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2017 TheMasterGeneral
+				Copyright (c) 2022 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -28,9 +28,9 @@
 //Stack handling helpers.
 package com.themastergeneral.ctdcore.helpers;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class StackHelper {
 	

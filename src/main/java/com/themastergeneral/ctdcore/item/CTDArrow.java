@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.16
+	Project:	CTD Core 1.17
 	File:		com.themastergeneral.ctdcore.item.CTDArrow
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2017 TheMasterGeneral
+				Copyright (c) 2022 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,7 @@
 //Extend to create an arrow.
 package com.themastergeneral.ctdcore.item;
 
-import net.minecraft.item.ArrowItem;
+import net.minecraft.world.item.ArrowItem;
 
 public class CTDArrow extends ArrowItem {
 	

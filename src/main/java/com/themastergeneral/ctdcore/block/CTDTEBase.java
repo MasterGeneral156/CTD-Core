@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.16
+	Project:	CTD Core 1.17
 	File:		com.themastergeneral.ctdcore.block.CTDTEBase
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2017 TheMasterGeneral
+				Copyright (c) 2022 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -29,12 +29,12 @@ package com.themastergeneral.ctdcore.block;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.extensions.IForgeBlockState;
 
-public abstract class CTDTEBase<TE extends TileEntity, IBlockAccess> extends CTDBlock {
+public abstract class CTDTEBase<TE extends BlockEntity, IBlockAccess> extends CTDBlock {
 
 	public CTDTEBase(Properties material) {
 		super(material);
@@ -44,7 +44,7 @@ public abstract class CTDTEBase<TE extends TileEntity, IBlockAccess> extends CTD
 	
 	@SuppressWarnings("unchecked")
 	public TE getTileEntity(IBlockAccess world, BlockPos pos) {
-		return (TE)((World) world).getBlockEntity(pos);
+		return (TE)((Level) world).getBlockEntity(pos);
 	}
 	
 	public boolean hasTileEntity(IForgeBlockState state) {
@@ -52,6 +52,6 @@ public abstract class CTDTEBase<TE extends TileEntity, IBlockAccess> extends CTD
 	}
 	
 	@Nullable
-	public abstract TE createTileEntity(World world, IForgeBlockState state);
+	public abstract TE createTileEntity(Level world, IForgeBlockState state);
 
 }

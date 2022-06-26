@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.16
+	Project:	CTD Core 1.17
 	File:		com.themastergeneral.ctdcore.item.CTDBow
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2017 TheMasterGeneral
+				Copyright (c) 2022 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -28,8 +28,8 @@
 //Extend to create a bow that uses ammo from ItemArrow
 package com.themastergeneral.ctdcore.item;
 
-import net.minecraft.item.BowItem;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.ItemStack;
 
 public class CTDBow extends BowItem {
 	protected int drawspeed; // How long it should take to draw the bow completely.

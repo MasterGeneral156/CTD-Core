@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.16
+	Project:	CTD Core 1.17
 	File:		com.themastergeneral.ctdcore.helpers.ServerHelper
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2017 TheMasterGeneral
+				Copyright (c) 2022 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -27,20 +27,57 @@
 */
 package com.themastergeneral.ctdcore.helpers;
 
-import net.minecraft.world.World;
+import net.minecraft.world.level.Level;
 
 public class ServerHelper {
-	public static boolean isClientWorld(World world) 
+	/**
+	 * Test to see if we are on the server side
+	 * @param level Level to test
+	 * @return boolean
+	 * @deprecated Use {@link ServerHelper#isClientLevel(Level)}
+	 */
+	public static boolean isClientWorld(Level level) 
 	{
-		return world.isClientSide();
+		return level.isClientSide();
 	}
-	public static boolean isServerWorld(World world) 
+	/**
+	 * Test to see if we are on the server side
+	 * @param level Level to test
+	 * @return boolean
+	 * @deprecated Use {@link ServerHelper#isServerLevel(Level)}
+	 */
+	public static boolean isServerWorld(Level level) 
 	{
-		return !world.isClientSide();
-	}
-	public static boolean isRaining(World world) 
-	{
-		return world.isRaining();
+		return !level.isClientSide();
 	}
 	
+	/**
+	 * Test to see if current loaded level is raining
+	 * @param level Level to test
+	 * @return boolean
+	 */
+	public static boolean isRaining(Level level) 
+	{
+		return level.isRaining();
+	}
+	
+	/**
+	 * Test to see if we are on the server side
+	 * @param level Level to test
+	 * @return boolean
+	 */
+	public static boolean isServerLevel(Level level) 
+	{
+		return !level.isClientSide();
+	}
+	
+	/**
+	 * Test to see if we are on the client side
+	 * @param level Level to test
+	 * @return boolean
+	 */
+	public static boolean isClientLevel(Level level) 
+	{
+		return !level.isClientSide();
+	}
 }

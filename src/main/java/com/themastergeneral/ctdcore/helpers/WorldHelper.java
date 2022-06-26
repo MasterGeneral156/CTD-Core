@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.16
+	Project:	CTD Core 1.17
 	File:		com.themastergeneral.ctdcore.helpers.WorldHelper
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2017 TheMasterGeneral
+				Copyright (c) 2022 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -28,20 +28,19 @@
 //Helper class for world base stuff.
 package com.themastergeneral.ctdcore.helpers;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.block.Block;
 
 public class WorldHelper 
 {
 	// Function used to find the block under an entity.
-	public static Block findBlockUnderEntity(Entity e) 
+	/*public static Block findBlockUnderEntity(Entity e) 
 	{
 		int blockX = MathHelper.floor(e.getX());
 		int blockY = MathHelper.floor(e.getY()-0.2D - e.getEyeY());
 		int blockZ = MathHelper.floor(e.getZ());
 		BlockPos blockpos = new BlockPos(blockX, blockY, blockZ);
 		return e.getCommandSenderWorld().getBlockState(blockpos).getBlock();
-	}
+	}*/
 }
