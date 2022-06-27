@@ -1,11 +1,11 @@
 modLoader="javafml" #mandatory
-loaderVersion="[40,)" #mandatory
+loaderVersion="[41,)" #mandatory
 updateJSONURL="https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json" #optional
 issueTrackerURL="https://github.com/MasterGeneral156/CTD-Core/issues" #optional
 displayURL="https://minecraft.curseforge.com/projects/ctd-core" #optional
 authors="TheMasterGeneral" #optional
 logoFile="logo-new.png" #optional
-license="https://github.com/MasterGeneral156/CTD-Core/blob/1.18/LICENSE"
+license="https://github.com/MasterGeneral156/CTD-Core/blob/1.19/LICENSE"
 [[mods]] #mandatory
     modId="ctdcore" #mandatory
     version="2.1.1b" #mandatory
