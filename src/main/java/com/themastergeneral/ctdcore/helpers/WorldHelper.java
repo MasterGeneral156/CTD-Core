@@ -30,11 +30,17 @@ package com.themastergeneral.ctdcore.helpers;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 
 public class WorldHelper 
 {
-	// Function used to find the block under an entity.
+	/**
+	 * Find the block under the input entity
+	 * @param e Entity to find block for
+	 * @since 1.18.2-2.1.3
+	 * @return boolean
+	 */
 	public static Block findBlockUnderEntity(Entity e) 
 	{
 		double blockX = Math.floor(e.getX());
@@ -42,5 +48,37 @@ public class WorldHelper
 		double blockZ = Math.floor(e.getZ());
 		BlockPos blockpos = new BlockPos(blockX, blockY, blockZ);
 		return e.getCommandSenderWorld().getBlockState(blockpos).getBlock();
+	}
+	
+	/**
+	 * Test to see if current loaded level is raining
+	 * @param level Level to test
+	 * @return boolean
+	 */
+	public static boolean isRaining(Level level) 
+	{
+		return level.isRaining();
+	}
+	
+	/**
+	 * Test to see if current loaded level is night
+	 * @param level Level to test
+	 * @since 1.18.2-2.1.3
+	 * @return boolean
+	 */
+	public static boolean isCurrentlyNight(Level level)
+	{
+		return level.isNight();
+	}
+	
+	/**
+	 * Test to see if currently night and during a thunderstorm
+	 * @param level Level to test
+	 * @since 1.18.2-2.1.3
+	 * @return boolean
+	 */
+	public static boolean isPerfectStorm(Level level)
+	{
+		return (isRaining(level) && level.isThundering() && isCurrentlyNight(level));
 	}
 }

@@ -52,16 +52,6 @@ public class ServerHelper {
 	}
 	
 	/**
-	 * Test to see if current loaded level is raining
-	 * @param level Level to test
-	 * @return boolean
-	 */
-	public static boolean isRaining(Level level) 
-	{
-		return level.isRaining();
-	}
-	
-	/**
 	 * Test to see if we are on the server side
 	 * @param level Level to test
 	 * @return boolean
