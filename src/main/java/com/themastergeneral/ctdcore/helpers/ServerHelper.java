@@ -38,7 +38,7 @@ public class ServerHelper {
 	 */
 	public static boolean isClientWorld(Level level) 
 	{
-		return level.isClientSide();
+		return isClientWorld(level);
 	}
 	/**
 	 * Test to see if we are on the server side
@@ -48,17 +48,7 @@ public class ServerHelper {
 	 */
 	public static boolean isServerWorld(Level level) 
 	{
-		return !level.isClientSide();
-	}
-	
-	/**
-	 * Test to see if current loaded level is raining
-	 * @param level Level to test
-	 * @return boolean
-	 */
-	public static boolean isRaining(Level level) 
-	{
-		return level.isRaining();
+		return isServerLevel(level);
 	}
 	
 	/**

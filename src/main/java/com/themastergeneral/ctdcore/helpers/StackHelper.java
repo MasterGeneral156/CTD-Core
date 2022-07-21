@@ -34,13 +34,23 @@ import net.minecraft.world.item.Items;
 
 public class StackHelper {
 	
-	//Valid stack?
+	/**
+	 * Return if input ItemStack is a non-null, valid ItemStack.
+	 * @param stack ItemStack to test
+	 * @since 1.12.2
+	 * @return boolean
+	 */
 	public static boolean isValid(ItemStack stack) 
 	{
 		return stack != null && !stack.isEmpty();
 	}
 
-	//Returns stack size... duh?
+	/**
+	 * Return the size of an itemstack
+	 * @param stack ItemStack to test
+	 * @since 1.12.2
+	 * @return boolean
+	 */
 	public static int getStackSize(ItemStack stack) 
 	{
 		if (!isValid(stack))
