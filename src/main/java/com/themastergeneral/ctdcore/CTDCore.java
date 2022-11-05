@@ -50,7 +50,7 @@ public class CTDCore {
 	
 	private void setup(final FMLCommonSetupEvent event)
     {
-		LOGGER.info("CTD Core is launching.");
+		LOGGER.info("CTD Core is launching. Waiting on dependents...");
     }
 
 }
