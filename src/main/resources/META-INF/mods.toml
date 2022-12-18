@@ -1,5 +1,5 @@
 modLoader="javafml" #mandatory
-loaderVersion="[43,)" #mandatory
+loaderVersion="[44,)" #mandatory
 updateJSONURL="https://raw.githubusercontent.com/MasterGeneral156/Version/master/CTD-Core.json" #optional
 issueTrackerURL="https://github.com/MasterGeneral156/CTD-Core/issues" #optional
 displayURL="https://minecraft.curseforge.com/projects/ctd-core" #optional

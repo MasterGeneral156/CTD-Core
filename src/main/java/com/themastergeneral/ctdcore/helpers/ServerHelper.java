@@ -34,7 +34,7 @@ public class ServerHelper {
 	 * Test to see if we are on the server side
 	 * @param level Level to test
 	 * @return boolean
-	 * @deprecated Use {@link ServerHelper#isClientLevel(Level)}
+	 * @Deprecated Use {@link ServerHelper#isClientLevel(Level)}
 	 */
 	public static boolean isClientWorld(Level level) 
 	{
@@ -44,7 +44,7 @@ public class ServerHelper {
 	 * Test to see if we are on the server side
 	 * @param level Level to test
 	 * @return boolean
-	 * @deprecated Use {@link ServerHelper#isServerLevel(Level)}
+	 * @Deprecated Use {@link ServerHelper#isServerLevel(Level)}
 	 */
 	public static boolean isServerWorld(Level level) 
 	{

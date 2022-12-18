@@ -8,7 +8,6 @@ public class CTDDurabilityItem extends CTDItem {
 		super(properties.defaultDurability(durability).stacksTo(1));
 	}
 	
-	@Override
 	public ItemStack getContainerItem(ItemStack itemStack)
     {
 		ItemStack newStack = itemStack.copy();
@@ -17,7 +16,6 @@ public class CTDDurabilityItem extends CTDItem {
         
     }
 	
-	@Override 
 	public boolean hasContainerItem(ItemStack stack)
     {
         return true;
