@@ -26,8 +26,7 @@
 */
 package com.themastergeneral.ctdcore.item;
 
-import java.util.Random;
-
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 
 public class CTDDurabilityItem extends CTDItem {
@@ -40,10 +39,10 @@ public class CTDDurabilityItem extends CTDItem {
 	}
 
 	@Override
-	public ItemStack getContainerItem(ItemStack itemStack)
+	public ItemStack getCraftingRemainingItem(ItemStack itemStack)
     {
 		ItemStack stack = itemStack.copy();
-		if(stack.hurt(1, new Random(), null))
+		if(stack.hurt(1, RandomSource.createNewThreadLocalInstance(), null))
 			return ItemStack.EMPTY;
 		else
 			return stack;
@@ -56,7 +55,7 @@ public class CTDDurabilityItem extends CTDItem {
 	}
 
 	@Override
-	public boolean hasContainerItem(ItemStack stack)
+	public boolean hasCraftingRemainingItem(ItemStack stack)
 	{
 		return true;
 	}
