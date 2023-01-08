@@ -28,9 +28,7 @@
 //Stack handling helpers.
 package com.themastergeneral.ctdcore.helpers;
 
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 
 public class StackHelper {
 	
@@ -57,11 +55,5 @@ public class StackHelper {
 			return 0;
 		else
 			return stack.getCount();
-	}
-	
-	//Example: minecraft:air
-	public static Item itemFromRegistryName(String name) 
-	{
-		return Items.AIR;
 	}
 }
