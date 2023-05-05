@@ -28,6 +28,9 @@
 //Doesn't work yet.
 package com.themastergeneral.ctdcore.helpers;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+
 public class ModUtils {
 	/*public static Item getOtherModItem(String fqrn) {
 		return Item.getByNameOrId(fqrn);
@@ -36,4 +39,13 @@ public class ModUtils {
 	public static Block getOtherModBlock(String fqrn) {
 		return Block.getBlockFromName(fqrn);
 	}*/
+	public static MutableComponent displayString(String string)
+	{
+		return Component.literal(string);
+	}
+	
+	public static MutableComponent displayTranslation(String string)
+	{
+		return Component.translatable(string);
+	}
 }
