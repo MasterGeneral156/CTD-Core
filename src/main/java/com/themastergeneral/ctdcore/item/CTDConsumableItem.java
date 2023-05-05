@@ -40,12 +40,12 @@ public class CTDConsumableItem extends CTDItem {
 	}
 	
 	//TODO make work with effects.
-	public CTDConsumableItem(int hungerFed, float saturation, MobEffectInstance effect, float effectChance) {
+	/*public CTDConsumableItem(int hungerFed, float saturation, MobEffectInstance effect, float effectChance) {
 		super(new Item.Properties().food(new FoodProperties.Builder()
 				.nutrition(hungerFed)
 				.saturationMod(saturation)
 				.effect(effect, effectChance)
 				.build()));
-	}
+	}*/
 
 }
