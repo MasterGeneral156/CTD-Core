@@ -32,13 +32,8 @@ import net.minecraft.world.item.ArrowItem;
 
 public class CTDArrow extends ArrowItem {
 	
-	protected String name; // Name of the item.
-	protected String modid; // Mod ID domain to look for textures/models.
-	
-	public CTDArrow(Properties builder, String name, String modid) {
+	public CTDArrow(Properties builder) {
 		super(builder);
-		this.name = name;
-		this.modid = modid;
 	}
 
 }

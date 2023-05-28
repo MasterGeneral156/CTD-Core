@@ -25,20 +25,13 @@
 				OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 				SOFTWARE.
 */
-//Doesn't work yet.
 package com.themastergeneral.ctdcore.helpers;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 
-public class ModUtils {
-	/*public static Item getOtherModItem(String fqrn) {
-		return Item.getByNameOrId(fqrn);
-	}
-
-	public static Block getOtherModBlock(String fqrn) {
-		return Block.getBlockFromName(fqrn);
-	}*/
+public class ModUtils 
+{
 	public static MutableComponent displayString(String string)
 	{
 		return Component.literal(string);
