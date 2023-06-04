@@ -27,11 +27,13 @@
 */
 package com.themastergeneral.ctdcore.helpers;
 
+import net.minecraft.world.entity.EquipmentSlot;
+
 public class CTDConstants {
 
 	//Equipment slots
-	public static int helmetSlot	= 0;
-	public static int chestSlot		= 1;
-	public static int legSlot		= 2;
-	public static int bootSlot		= 3;
+	public static int helmetSlot	= EquipmentSlot.HEAD.getIndex();
+	public static int chestSlot		= EquipmentSlot.CHEST.getIndex();
+	public static int legSlot		= EquipmentSlot.LEGS.getIndex();
+	public static int bootSlot		= EquipmentSlot.FEET.getIndex();
 }
