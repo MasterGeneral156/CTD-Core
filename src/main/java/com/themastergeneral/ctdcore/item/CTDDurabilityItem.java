@@ -1,5 +1,5 @@
-/**
-	Project:	CTD-Core
+/*
+	Project:	CTD Core 1.20
 	File:		CTDDurabilityItem.java
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core

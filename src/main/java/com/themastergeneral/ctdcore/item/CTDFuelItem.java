@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 1.19
+	Project:	CTD Core 1.20
 	File:		com.themastergeneral.ctdcore.item.CTDFuelItem
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
