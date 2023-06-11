@@ -12888,11 +12888,12 @@ eclipse/.recommenders/repository/http___download_eclipse_org_recommenders_models
 eclipse/.recommenders/repository/http___download_eclipse_org_recommenders_models_luna_/org/eclipse/recommenders/index/0.0.0-SNAPSHOT/maven-metadata-models.xml
 eclipse/.recommenders/repository/http___download_eclipse_org_recommenders_models_luna_/org/eclipse/recommenders/index/0.0.0-SNAPSHOT/resolver-status.properties
 eclipse/.settings/org.eclipse.buildship.core.prefs
-run/config/forge.cfg
-run/config/splash.properties
-run/crash-reports/crash-2018-10-09_21.46.32-client.txt
-run/logs/debug.log
-run/logs/latest.log
 runClient.launch
 runServer.launch
 server.launch
+/.gradle/
+/build/
+/run/
+/bin/
+/.eclipse/
+/.settings/
