@@ -32,21 +32,45 @@ import net.minecraft.world.item.ItemStack;
 
 public class EntityHelper {
 
+	/**
+	 * Return the current player's helmet as ItemStack.
+	 * @param player
+	 * @return Player's helmet ItemStack.
+	 * @since 1.19.4-2.3.1
+	 */
 	public static ItemStack getPlayerHelmet(Player player)
 	{
 		return player.getInventory().getArmor(CTDConstants.helmetSlot);
 	}
 	
+	/**
+	 * Return the current player's chest plate as ItemStack.
+	 * @param player
+	 * @return Player's chestplate ItemStack.
+	 * @since 1.19.4-2.3.1
+	 */
 	public static ItemStack getPlayerChest(Player player)
 	{
 		return player.getInventory().getArmor(CTDConstants.chestSlot);
 	}
 	
+	/**
+	 * Return the current player's leggings as ItemStack.
+	 * @param player
+	 * @return Player's leggings ItemStack.
+	 * @since 1.19.4-2.3.1
+	 */
 	public static ItemStack getPlayerLegs(Player player)
 	{
 		return player.getInventory().getArmor(CTDConstants.legSlot);
 	}
 	
+	/**
+	 * Return the current player's boots as itemstack.
+	 * @param player
+	 * @return Player's boots ItemStack.
+	 * @since 1.19.4-2.3.1
+	 */
 	public static ItemStack getPlayerBoots(Player player)
 	{
 		return player.getInventory().getArmor(CTDConstants.bootSlot);
