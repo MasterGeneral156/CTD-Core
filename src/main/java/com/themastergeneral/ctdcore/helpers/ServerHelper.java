@@ -34,7 +34,7 @@ public class ServerHelper {
 	 * Test to see if we are on the server side
 	 * @param level Level to test
 	 * @return boolean
-	 * @Deprecated Use {@link ServerHelper#isClientLevel(Level)}
+	 * @deprecated Use {@link ServerHelper#isClientLevel(Level)}
 	 */
 	public static boolean isClientWorld(Level level) 
 	{
@@ -44,7 +44,7 @@ public class ServerHelper {
 	 * Test to see if we are on the server side
 	 * @param level Level to test
 	 * @return boolean
-	 * @Deprecated Use {@link ServerHelper#isServerLevel(Level)}
+	 * @deprecated Use {@link ServerHelper#isServerLevel(Level)}
 	 */
 	public static boolean isServerWorld(Level level) 
 	{
@@ -55,6 +55,7 @@ public class ServerHelper {
 	 * Test to see if current loaded level is raining
 	 * @param level Level to test
 	 * @return boolean
+	 * @since 1.17.1-2.1.1b
 	 */
 	public static boolean isRaining(Level level) 
 	{
@@ -65,6 +66,7 @@ public class ServerHelper {
 	 * Test to see if we are on the server side
 	 * @param level Level to test
 	 * @return boolean
+	 * @since 1.17.1-2.1.1b
 	 */
 	public static boolean isServerLevel(Level level) 
 	{
@@ -75,9 +77,10 @@ public class ServerHelper {
 	 * Test to see if we are on the client side
 	 * @param level Level to test
 	 * @return boolean
+	 * @since 1.17.1-2.1.1b
 	 */
 	public static boolean isClientLevel(Level level) 
 	{
-		return !level.isClientSide();
+		return level.isClientSide();
 	}
 }
