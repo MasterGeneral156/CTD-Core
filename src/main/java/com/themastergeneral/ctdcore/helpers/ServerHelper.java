@@ -52,50 +52,6 @@ public class ServerHelper {
 	}
 	
 	/**
-	 * Test to see if level is raining
-	 * @param level Level to test
-	 * @return boolean
-	 * @since 1.17.1-2.1.1b
-	 */
-	public static boolean isRaining(Level level) 
-	{
-		return level.isRaining();
-	}
-	
-	/**
-	 * Test to see if level is storming
-	 * @param level Level to test
-	 * @return boolean
-	 * @since 1.20.2-2.4.5
-	 */
-	public static boolean isStorming(Level level)
-	{
-		return level.isThundering();
-	}
-	
-	/**
-	 * Test to see if level is currently day
-	 * @param level Level to test
-	 * @return boolean
-	 * @since 1.20.2-2.4.5
-	 */
-	public static boolean isDaytime(Level level)
-	{
-		return level.isDay();
-	}
-	
-	/**
-	 * Test to see if level is currently night
-	 * @param level Level to test
-	 * @return boolean
-	 * @since 1.20.2-2.4.5
-	 */
-	public static boolean isNighttime(Level level)
-	{
-		return level.isNight();
-	}
-	
-	/**
 	 * Test to see if we are on the server side
 	 * @param level Level to test
 	 * @return boolean
