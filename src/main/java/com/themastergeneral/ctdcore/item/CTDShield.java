@@ -36,5 +36,10 @@ public class CTDShield extends ShieldItem {
 	{
 		super(builder.defaultDurability(maxdurability));
 	}
+	
+	public CTDShield(int maxdurability) 
+	{
+		super(new Properties().defaultDurability(maxdurability));
+	}
 
 }

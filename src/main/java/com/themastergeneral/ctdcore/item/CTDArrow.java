@@ -35,5 +35,13 @@ public class CTDArrow extends ArrowItem {
 	public CTDArrow(Properties builder) {
 		super(builder);
 	}
+	
+	public CTDArrow() {
+		super(new Properties());
+	}
+	
+	public CTDArrow(int stackSize) {
+		super(new Properties().stacksTo(stackSize));
+	}
 
 }

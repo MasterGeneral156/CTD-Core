@@ -38,6 +38,11 @@ public class CTDBow extends BowItem {
 		super(builder.defaultDurability(maxdurability));
 		this.drawspeed = drawspeed;
 	}
+	
+	public CTDBow(int drawspeed, int maxdurability) {
+		super(new Properties().defaultDurability(maxdurability));
+		this.drawspeed = drawspeed;
+	}
 
 	public int getMaxItemUseDuration(ItemStack stack) {
 		return drawspeed;

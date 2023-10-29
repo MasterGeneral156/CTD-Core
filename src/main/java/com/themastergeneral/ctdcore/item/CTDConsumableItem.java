@@ -39,6 +39,18 @@ public class CTDConsumableItem extends CTDItem {
 				.build()));
 	}
 	
+	public CTDConsumableItem(float saturation) {
+		super(new Item.Properties().food(new FoodProperties.Builder()
+				.saturationMod(saturation)
+				.build()));
+	}
+	
+	public CTDConsumableItem(int hungerFed) {
+		super(new Item.Properties().food(new FoodProperties.Builder()
+				.nutrition(hungerFed)
+				.build()));
+	}
+	
 	//TODO make work with effects.
 	/*public CTDConsumableItem(int hungerFed, float saturation, MobEffectInstance effect, float effectChance) {
 		super(new Item.Properties().food(new FoodProperties.Builder()

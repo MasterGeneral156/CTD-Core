@@ -35,5 +35,9 @@ public class CTDItem extends Item {
 	public CTDItem(Properties properties) {
 		super(properties);
 	}
+	
+	public CTDItem() {
+		super(new Properties());
+	}
 
 }
