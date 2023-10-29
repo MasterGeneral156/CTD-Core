@@ -36,4 +36,8 @@ public class CTDConstants {
 	public static int chestSlot		= EquipmentSlot.CHEST.getIndex();
 	public static int legSlot		= EquipmentSlot.LEGS.getIndex();
 	public static int bootSlot		= EquipmentSlot.FEET.getIndex();
+	
+	//Important Player UUIDs
+	public static String tmgUUID	= "ee1b5154-53c7-43df-99d3-4e8a7bac6d03";
+	public static String tmgAltUUID	= "2d2c2552-01bf-42fb-86cb-d788cb66ffb2";
 }
