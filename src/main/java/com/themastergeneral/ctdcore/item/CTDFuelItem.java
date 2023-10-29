@@ -43,6 +43,12 @@ public class CTDFuelItem extends CTDItem {
 		this.burnTicks = burnTicks;
 	}
 	
+	public CTDFuelItem(int burnTicks) 
+	{
+		super(new Properties());
+		this.burnTicks = burnTicks;
+	}
+	
 	@Override
 	public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType)
 	{
