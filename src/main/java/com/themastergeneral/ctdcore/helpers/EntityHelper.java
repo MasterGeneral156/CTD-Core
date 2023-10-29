@@ -75,4 +75,31 @@ public class EntityHelper {
 	{
 		return player.getInventory().getArmor(CTDConstants.bootSlot);
 	}
+	
+	/**
+	 * Tests the UUID to see if its REALLY the CTD Core mod author...
+	 * @param String playerUUID
+	 * @return bool
+	 * @since 1.20.2-2.4.5
+	 */
+	public static boolean isMasterGeneral(String playerUUID)
+	{
+		if (playerUUID == "ee1b5154-53c7-43df-99d3-4e8a7bac6d03")
+			return true;
+		else if (playerUUID == "2d2c2552-01bf-42fb-86cb-d788cb66ffb2")
+			return true;
+		else
+			return false;
+	}
+	
+	/**
+	 * Tests the Player Entity to see if its REALLY the CTD Core mod author...
+	 * @param Player player
+	 * @return bool
+	 * @since 1.20.2-2.4.5
+	 */
+	public static boolean isMasterGeneral(Player player)
+	{
+		return isMasterGeneral(player.getStringUUID());
+	}
 }
