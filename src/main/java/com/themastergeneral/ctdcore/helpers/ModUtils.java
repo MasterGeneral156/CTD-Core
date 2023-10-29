@@ -70,8 +70,6 @@ public class ModUtils
 		
 		if (numberLong < 1000)
 	        returned = nf.format(number);
-	    else if (number.intValue() < 10000L)
-	        returned = nf.format(numberLong / 1000L) + "K";
 	    else if (numberLong < 1000000L)
 	        returned = nf.format(numberLong / 1000L) + "K";
 	    else if (numberLong < 1000000000L)
@@ -81,7 +79,7 @@ public class ModUtils
 	    else if (numberLong < 1000000000000000L)
 	        returned = nf.format(numberLong / 1000000000000L) + "T";
 	    else if (numberLong < 1000000000000000000L)
-	        returned = nf.format(numberLong / 1000000000000000L) + " Quadrillion";
+	        returned = nf.format(numberLong / 1000000000000000L) + " Q";
 	    else
 	        returned = nf.format(number);
 	    return returned;
