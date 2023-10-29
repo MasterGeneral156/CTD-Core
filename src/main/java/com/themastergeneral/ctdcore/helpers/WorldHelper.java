@@ -88,4 +88,28 @@ public class WorldHelper
 	{
 		return level.isNight();
 	}
+	
+	/**
+	 * Test to see if level is daytime and not raining/storming.
+	 * Used for solar powered generators.
+	 * @param level Level to test
+	 * @return boolean
+	 * @since 1.20.2-2.4.5
+	 */
+	public static boolean isClearDaytime(Level level)
+	{
+		return ((isDaytime(level)) && (!isRaining(level)) && (!isStorming(level)));
+	}
+	
+	/**
+	 * Test to see if level is daytime and not raining/storming
+	 * Used for moon powered generators.
+	 * @param level Level to test
+	 * @return boolean
+	 * @since 1.20.2-2.4.5
+	 */
+	public static boolean isClearNighttime(Level level)
+	{
+		return ((isNighttime(level)) && (!isRaining(level)) && (!isStorming(level)));
+	}
 }
