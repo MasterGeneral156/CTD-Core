@@ -39,7 +39,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("ctdcore")
 public class CTDCore {
 	public static CTDCore instance;
-	private static final Logger LOGGER = LogManager.getLogger();
+	public static final Logger LOGGER = LogManager.getLogger();
 
 	public CTDCore() {
 		instance = this;
