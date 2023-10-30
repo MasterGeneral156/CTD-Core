@@ -34,13 +34,13 @@ public class CTDDurabilityItem extends CTDItem {
 	private int maxDurability;
 
 	public CTDDurabilityItem(Properties properties, int durability) {
-		super(properties.defaultDurability(durability).stacksTo(1));
+		super(properties.defaultDurability(durability));
 		this.maxDurability = durability;
 	}
 	
 	public CTDDurabilityItem(int durability) 
 	{
-		super(new Properties().stacksTo(1).defaultDurability(durability));
+		super(new Properties().defaultDurability(durability));
 		this.maxDurability = durability;
 	}
 
