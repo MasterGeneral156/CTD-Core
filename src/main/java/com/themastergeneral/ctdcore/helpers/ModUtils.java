@@ -60,7 +60,7 @@ public class ModUtils
 	 * Makes the input number into a friendly readable number (IE: 1K, 200K, 3M, etc.)
 	 * @param number
 	 * @return Formatted Number (IE: 1K, 200K, 3M)
-	 * @since 1.20.2-2.4.5
+	 * @since 1.20.2-2.4.5 & 1.20.1-2.4.8
 	 */
 	public static String returnShortenedNumber(Number number)
 	{

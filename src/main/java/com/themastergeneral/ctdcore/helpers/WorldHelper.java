@@ -60,7 +60,7 @@ public class WorldHelper
 	 * Test to see if level is storming
 	 * @param level Level to test
 	 * @return boolean
-	 * @since 1.20.2-2.4.5
+	 * @since 1.20.2-2.4.5 / 1.20.1-2.4.8
 	 */
 	public static boolean isStorming(Level level)
 	{
@@ -71,7 +71,7 @@ public class WorldHelper
 	 * Test to see if level is currently day
 	 * @param level Level to test
 	 * @return boolean
-	 * @since 1.20.2-2.4.5
+	 * @since 1.20.2-2.4.5 / 1.20.1-2.4.8
 	 */
 	public static boolean isDaytime(Level level)
 	{
@@ -82,7 +82,7 @@ public class WorldHelper
 	 * Test to see if level is currently night
 	 * @param level Level to test
 	 * @return boolean
-	 * @since 1.20.2-2.4.5
+	 * @since 1.20.2-2.4.5 / 1.20.1-2.4.8
 	 */
 	public static boolean isNighttime(Level level)
 	{
@@ -94,7 +94,7 @@ public class WorldHelper
 	 * Used for solar powered generators.
 	 * @param level Level to test
 	 * @return boolean
-	 * @since 1.20.2-2.4.5
+	 * @since 1.20.2-2.4.5 / 1.20.1-2.4.8
 	 */
 	public static boolean isClearDaytime(Level level)
 	{
@@ -106,7 +106,7 @@ public class WorldHelper
 	 * Used for moon powered generators.
 	 * @param level Level to test
 	 * @return boolean
-	 * @since 1.20.2-2.4.5
+	 * @since 1.20.2-2.4.5 / 1.20.1-2.4.8
 	 */
 	public static boolean isClearNighttime(Level level)
 	{
