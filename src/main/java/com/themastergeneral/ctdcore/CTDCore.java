@@ -5,7 +5,7 @@
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2023 TheMasterGeneral
+				Copyright (c) 2024 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -27,27 +27,22 @@
 */
 package com.themastergeneral.ctdcore;
 
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import com.mojang.logging.LogUtils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+
+import org.slf4j.Logger;
 
 @Mod("ctdcore")
 public class CTDCore {
 	public static CTDCore instance;
-	public static final Logger LOGGER = LogManager.getLogger();
+	public static final Logger LOGGER = LogUtils.getLogger();
 
-	public CTDCore() {
+	public CTDCore(IEventBus modEventBus) {
 		instance = this;
-        // Register the setup method for modloading
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
-
-        MinecraftForge.EVENT_BUS.register(this);
     }
 	
 	private void setup(final FMLCommonSetupEvent event)

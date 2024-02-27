@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.19
+	Project:	CTD Core 1.20
 	File:		com.themastergeneral.ctdcore.block.CTDTEBase
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2023 TheMasterGeneral
+				Copyright (c) 2024 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.extensions.IForgeBlockState;
+import net.neoforged.neoforge.client.model.generators.IGeneratedBlockState;
 
 public abstract class CTDTEBase<TE extends BlockEntity, IBlockAccess> extends CTDBlock {
 
@@ -47,11 +47,11 @@ public abstract class CTDTEBase<TE extends BlockEntity, IBlockAccess> extends CT
 		return (TE)((Level) world).getBlockEntity(pos);
 	}
 	
-	public boolean hasTileEntity(IForgeBlockState state) {
+	public boolean hasTileEntity(IGeneratedBlockState state) {
 		return true;
 	}
 	
 	@Nullable
-	public abstract TE createTileEntity(Level world, IForgeBlockState state);
+	public abstract TE createTileEntity(Level world, IGeneratedBlockState state);
 
 }
