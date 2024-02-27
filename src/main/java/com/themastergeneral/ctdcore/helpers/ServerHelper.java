@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.19
+	Project:	CTD Core 1.20
 	File:		com.themastergeneral.ctdcore.helpers.ServerHelper
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2023 TheMasterGeneral
+				Copyright (c) 2024 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -29,28 +29,7 @@ package com.themastergeneral.ctdcore.helpers;
 
 import net.minecraft.world.level.Level;
 
-public class ServerHelper {
-	/**
-	 * Test to see if we are on the server side
-	 * @param level Level to test
-	 * @return boolean
-	 * @deprecated Use {@link ServerHelper#isClientLevel(Level)}
-	 */
-	public static boolean isClientWorld(Level level) 
-	{
-		return level.isClientSide();
-	}
-	/**
-	 * Test to see if we are on the server side
-	 * @param level Level to test
-	 * @return boolean
-	 * @deprecated Use {@link ServerHelper#isServerLevel(Level)}
-	 */
-	public static boolean isServerWorld(Level level) 
-	{
-		return !level.isClientSide();
-	}
-	
+public class ServerHelper {	
 	/**
 	 * Test to see if we are on the server side
 	 * @param level Level to test
