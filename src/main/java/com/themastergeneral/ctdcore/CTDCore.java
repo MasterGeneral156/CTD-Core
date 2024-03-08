@@ -28,6 +28,7 @@
 package com.themastergeneral.ctdcore;
 
 import com.mojang.logging.LogUtils;
+import com.themastergeneral.ctdcore.helpers.ModUtils;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -47,7 +48,7 @@ public class CTDCore {
 	
 	private void setup(final FMLCommonSetupEvent event)
     {
-		LOGGER.info("CTD Core is launching.");
+		LOGGER.info("CTD Core for is launching for " + ModUtils.getLoader() + " v" + ModUtils.getLoaderVersion());
     }
 
 }

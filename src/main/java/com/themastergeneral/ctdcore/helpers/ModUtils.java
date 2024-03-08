@@ -31,6 +31,7 @@ import java.text.NumberFormat;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion;
 
 public class ModUtils 
 {
@@ -83,5 +84,25 @@ public class ModUtils
 	    else
 	        returned = nf.format(number);
 	    return returned;
+	}/**
+	 * Returns the current mod loader..........
+	 * @param string
+	 * @return Mod loader as string
+	 * @since 1.20.4-2.5.2
+	 */
+	public static String getLoader()
+	{
+		return NeoForgeVersion.MOD_ID;
+	}
+	
+	/**
+	 * Returns the current mod loader's version..........
+	 * @param string
+	 * @return Mod loader version as string
+	 * @since 1.20.4-2.5.2
+	 */
+	public static String getLoaderVersion()
+	{
+		return NeoForgeVersion.getVersion();
 	}
 }
