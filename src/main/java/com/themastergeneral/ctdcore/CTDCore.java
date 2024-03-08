@@ -36,6 +36,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.themastergeneral.ctdcore.helpers.ModUtils;
+
 @Mod("ctdcore")
 public class CTDCore {
 	public static CTDCore instance;
@@ -52,7 +54,7 @@ public class CTDCore {
 	
 	private void setup(final FMLCommonSetupEvent event)
     {
-		LOGGER.info("CTD Core is launching.");
+		LOGGER.info("CTD Core for is launching for " + ModUtils.getLoader() + " v" + ModUtils.getLoaderVersion());
     }
 
 }

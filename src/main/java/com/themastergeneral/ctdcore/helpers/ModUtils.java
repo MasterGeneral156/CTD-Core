@@ -31,6 +31,9 @@ import java.text.NumberFormat;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.versions.forge.ForgeVersion;
 
 public class ModUtils 
 {
@@ -83,5 +86,27 @@ public class ModUtils
 	    else
 	        returned = nf.format(number);
 	    return returned;
+	}
+	
+	/**
+	 * Returns the current mod loader..........
+	 * @param string
+	 * @return Mod loader as string
+	 * @since 1.20.1-2.4.9
+	 */
+	public static String getLoader()
+	{
+		return ForgeVersion.MOD_ID;
+	}
+	
+	/**
+	 * Returns the current mod loader's version..........
+	 * @param string
+	 * @return Mod loader version as string
+	 * @since 1.20.1-2.4.9
+	 */
+	public static String getLoaderVersion()
+	{
+		return ForgeVersion.getVersion();
 	}
 }
