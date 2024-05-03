@@ -35,12 +35,12 @@ public class CTDBow extends BowItem {
 	protected int drawspeed; // How long it should take to draw the bow completely.
 	
 	public CTDBow(Properties builder, int drawspeed, int maxdurability) {
-		super(builder.defaultDurability(maxdurability));
+		super(builder.durability(maxdurability));
 		this.drawspeed = drawspeed;
 	}
 	
 	public CTDBow(int drawspeed, int maxdurability) {
-		super(new Properties().defaultDurability(maxdurability));
+		super(new Properties().durability(maxdurability));
 		this.drawspeed = drawspeed;
 	}
 

@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 1.19
+	Project:	CTD Core 1.20
 	File:		com.themastergeneral.ctdcore.helpers.StackHelper
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
@@ -28,6 +28,9 @@
 //Stack handling helpers.
 package com.themastergeneral.ctdcore.helpers;
 
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
 public class StackHelper {
@@ -55,5 +58,30 @@ public class StackHelper {
 			return 0;
 		else
 			return stack.getCount();
+	}
+	
+	/**
+	 * Check the Player and ItemStack to see if a cooldown is active
+	 * @param player Player
+	 * @param stack ItemStack
+	 * @since 1.20.5-2.4.10
+	 * @return boolean
+	 */
+	public static boolean isOnCooldown(Player player, ItemStack stack)
+	{
+		return player.getCooldowns().isOnCooldown(stack.getItem());
+	}
+	
+	/**
+	 * Internal function. Damages the stack and gives the player a cooldown.
+	 * @param player Player
+	 * @param stack ItemStack
+	 * @param cooldown Integer
+	 * @since 1.20.5-2.4.10
+	 */
+	public static void hurtStackAddCooldown(Player player, ItemStack stack, int cooldown)
+	{
+		stack.hurtAndBreak(1, RandomSource.create(), (ServerPlayer) player, null);
+		player.getCooldowns().addCooldown(stack.getItem(), cooldown);
 	}
 }

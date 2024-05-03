@@ -31,34 +31,28 @@ import net.minecraft.world.item.ItemStack;
 
 public class CTDDurabilityItem extends CTDItem {
 
-	private int maxDurability;
 
 	public CTDDurabilityItem(Properties properties, int durability) {
-		super(properties.defaultDurability(durability));
-		this.maxDurability = durability;
+		super(properties.durability(durability).stacksTo(1));
 	}
 	
 	public CTDDurabilityItem(int durability) 
 	{
-		super(new Properties().defaultDurability(durability));
-		this.maxDurability = durability;
+		super(new Properties().durability(durability).stacksTo(1));
 	}
 
 	@Override
 	public ItemStack getCraftingRemainingItem(ItemStack itemStack)
     {
 		ItemStack stack = itemStack.copy();
-		if(stack.hurt(1, RandomSource.createNewThreadLocalInstance(), null))
+		if(stack.getMaxDamage() == stack.getMaxDamage())
 			return ItemStack.EMPTY;
 		else
-			return stack;
+		{
+			stack.hurtAndBreak(1, RandomSource.create(), null, null);
+			return stack.copy();
+		}
     }
-
-	@Override
-	public int getMaxDamage(ItemStack stack)
-	{
-		return maxDurability;
-	}
 
 	@Override
 	public boolean hasCraftingRemainingItem(ItemStack stack)

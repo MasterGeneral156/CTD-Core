@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.19
+	Project:	CTD Core 1.20
 	File:		com.themastergeneral.ctdcore.item.CTDConsumableItem
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2023 TheMasterGeneral
+				Copyright (c) 2024 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -35,13 +35,13 @@ public class CTDConsumableItem extends CTDItem {
 	public CTDConsumableItem(int hungerFed, float saturation) {
 		super(new Item.Properties().food(new FoodProperties.Builder()
 				.nutrition(hungerFed)
-				.saturationMod(saturation)
+				.saturationModifier(saturation)
 				.build()));
 	}
 	
 	public CTDConsumableItem(float saturation) {
 		super(new Item.Properties().food(new FoodProperties.Builder()
-				.saturationMod(saturation)
+				.saturationModifier(saturation)
 				.build()));
 	}
 	
