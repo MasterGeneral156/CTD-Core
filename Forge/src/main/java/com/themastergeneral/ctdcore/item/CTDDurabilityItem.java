@@ -49,7 +49,7 @@ public class CTDDurabilityItem extends CTDItem {
 			return ItemStack.EMPTY;
 		else
 		{
-			stack.hurtAndBreak(1, RandomSource.create(), null, null);
+			stack.hurtAndBreak(1, null, null);
 			return stack.copy();
 		}
     }

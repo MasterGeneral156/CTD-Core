@@ -30,6 +30,7 @@ package com.themastergeneral.ctdcore.helpers;
 
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
@@ -81,7 +82,7 @@ public class StackHelper {
 	 */
 	public static void hurtStackAddCooldown(Player player, ItemStack stack, int cooldown)
 	{
-		stack.hurtAndBreak(1, RandomSource.create(), (ServerPlayer) player, null);
+		stack.hurtAndBreak(1, player, null);
 		player.getCooldowns().addCooldown(stack.getItem(), cooldown);
 	}
 }
