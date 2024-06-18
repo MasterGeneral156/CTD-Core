@@ -27,30 +27,11 @@
 */
 package com.themastergeneral.ctdcore.helpers;
 
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 
-public class ServerHelper {
-	/**
-	 * Test to see if we are on the server side
-	 * @param level Level to test
-	 * @return boolean
-	 * @deprecated Use {@link ServerHelper#isClientLevel(Level)}
-	 */
-	public static boolean isClientWorld(Level level) 
-	{
-		return level.isClientSide();
-	}
-	/**
-	 * Test to see if we are on the server side
-	 * @param level Level to test
-	 * @return boolean
-	 * @deprecated Use {@link ServerHelper#isServerLevel(Level)}
-	 */
-	public static boolean isServerWorld(Level level) 
-	{
-		return !level.isClientSide();
-	}
-	
+public class ServerHelper {	
 	/**
 	 * Test to see if we are on the server side
 	 * @param level Level to test
@@ -59,7 +40,7 @@ public class ServerHelper {
 	 */
 	public static boolean isServerLevel(Level level) 
 	{
-		return !isClientLevel(level);
+		return (level instanceof ServerLevel);
 	}
 	
 	/**
@@ -70,6 +51,6 @@ public class ServerHelper {
 	 */
 	public static boolean isClientLevel(Level level) 
 	{
-		return level.isClientSide();
+		return (level instanceof ClientLevel);
 	}
 }
