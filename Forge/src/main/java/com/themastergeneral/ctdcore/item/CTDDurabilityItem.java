@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 1.20
+	Project:	CTD Core 1.21
 	File:		CTDDurabilityItem.java
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
@@ -26,8 +26,18 @@
 */
 package com.themastergeneral.ctdcore.item;
 
-import net.minecraft.util.RandomSource;
+import java.util.List;
+
+
+import com.themastergeneral.ctdcore.helpers.CTDConstants;
+import com.themastergeneral.ctdcore.helpers.ModUtils;
+
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class CTDDurabilityItem extends CTDItem {
 
@@ -45,11 +55,12 @@ public class CTDDurabilityItem extends CTDItem {
 	public ItemStack getCraftingRemainingItem(ItemStack itemStack)
     {
 		ItemStack stack = itemStack.copy();
-		if(stack.getMaxDamage() == stack.getMaxDamage())
+		if(stack.getDamageValue() == stack.getMaxDamage())
 			return ItemStack.EMPTY;
 		else
 		{
-			stack.hurtAndBreak(1, null, null);
+			if (stack.getMaxDamage() != CTDConstants.creativeDurability)
+				stack.hurtAndBreak(1, null, null);
 			return stack.copy();
 		}
     }
@@ -59,4 +70,23 @@ public class CTDDurabilityItem extends CTDItem {
 	{
 		return true;
 	}
+	
+	
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn) 
+	{
+		if (stack.isDamageableItem())
+			tooltip.add(ModUtils.displayString("Durability: " + ModUtils.returnFormattedNumber(stack.getDamageValue()) + "/" + ModUtils.returnFormattedNumber(stack.getMaxDamage())));
+	}
+	
+	@Override
+	public boolean isFoil(ItemStack stack) {
+		if (stack.isEnchanted())
+			return true;
+		else if (stack.getMaxDamage() == CTDConstants.creativeDurability)
+			return true;
+		else
+			return false;
+    }
 }
