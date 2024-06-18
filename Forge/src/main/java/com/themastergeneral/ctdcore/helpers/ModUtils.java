@@ -89,6 +89,17 @@ public class ModUtils
 	}
 	
 	/**
+	 * Makes the input number into a friendly readable number (IE: 1,024; 300,000; 42,512,512)
+	 * @param number
+	 * @return Formatted Number (IE: 1,024; 300,000; 42,512,512)
+	 * @since 1.21-2.6.0
+	 */
+	public static String returnFormattedNumber(Number number)
+	{
+		return NumberFormat.getInstance().format(number);
+	}
+	
+	/**
 	 * Returns the current mod loader..........
 	 * @param string
 	 * @return Mod loader as string
