@@ -39,5 +39,9 @@ public class CTDItem extends Item {
 	public CTDItem() {
 		super(new Properties());
 	}
+	
+	public CTDItem(int maxStackSize) {
+		super(new Properties().stacksTo(maxStackSize));
+	}
 
 }
