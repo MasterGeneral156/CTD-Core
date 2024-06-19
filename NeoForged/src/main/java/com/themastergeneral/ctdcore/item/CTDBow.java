@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 1.20
+	Project:	CTD Core 1.21
 	File:		com.themastergeneral.ctdcore.item.CTDBow
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
@@ -35,12 +35,12 @@ public class CTDBow extends BowItem {
 	protected int drawspeed; // How long it should take to draw the bow completely.
 	
 	public CTDBow(Properties builder, int drawspeed, int maxdurability) {
-		super(builder.defaultDurability(maxdurability));
+		super(builder.durability(maxdurability));
 		this.drawspeed = drawspeed;
 	}
 	
 	public CTDBow(int drawspeed, int maxdurability) {
-		super(new Properties().defaultDurability(maxdurability));
+		super(new Properties().durability(maxdurability));
 		this.drawspeed = drawspeed;
 	}
 

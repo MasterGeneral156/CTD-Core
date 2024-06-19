@@ -35,13 +35,13 @@ public class CTDConsumableItem extends CTDItem {
 	public CTDConsumableItem(int hungerFed, float saturation) {
 		super(new Item.Properties().food(new FoodProperties.Builder()
 				.nutrition(hungerFed)
-				.saturationMod(saturation)
+				.saturationModifier(saturation)
 				.build()));
 	}
 	
 	public CTDConsumableItem(float saturation) {
 		super(new Item.Properties().food(new FoodProperties.Builder()
-				.saturationMod(saturation)
+				.saturationModifier(saturation)
 				.build()));
 	}
 	

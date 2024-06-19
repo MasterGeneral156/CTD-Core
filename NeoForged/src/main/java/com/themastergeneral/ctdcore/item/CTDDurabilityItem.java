@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 1.20
+	Project:	CTD Core 1.21
 	File:		CTDDurabilityItem.java
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
@@ -34,13 +34,13 @@ public class CTDDurabilityItem extends CTDItem {
 	private int maxDurability;
 
 	public CTDDurabilityItem(Properties properties, int durability) {
-		super(properties.defaultDurability(durability));
+		super(properties.durability(durability));
 		this.maxDurability = durability;
 	}
 	
 	public CTDDurabilityItem(int durability) 
 	{
-		super(new Properties().defaultDurability(durability));
+		super(new Properties().durability(durability));
 		this.maxDurability = durability;
 	}
 
@@ -48,10 +48,11 @@ public class CTDDurabilityItem extends CTDItem {
 	public ItemStack getCraftingRemainingItem(ItemStack itemStack)
     {
 		ItemStack stack = itemStack.copy();
-		if(stack.hurt(1, RandomSource.createNewThreadLocalInstance(), null))
+		if(stack.getDamageValue() == stack.getMaxDamage())
 			return ItemStack.EMPTY;
 		else
-			return stack;
+				stack.hurtAndBreak(1, null, null);
+			return stack.copy();
     }
 
 	@Override

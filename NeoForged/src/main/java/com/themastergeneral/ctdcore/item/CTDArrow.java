@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 1.20
+	Project:	CTD Core 1.21
 	File:		com.themastergeneral.ctdcore.item.CTDArrow
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core

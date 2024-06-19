@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 1.20
+	Project:	CTD Core 1.21
 	File:		com.themastergeneral.ctdcore.item.CTDShield
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
@@ -34,12 +34,12 @@ public class CTDShield extends ShieldItem {
 	
 	public CTDShield(Properties builder, int maxdurability) 
 	{
-		super(builder.defaultDurability(maxdurability));
+		super(builder.durability(maxdurability));
 	}
 	
 	public CTDShield(int maxdurability) 
 	{
-		super(new Properties().defaultDurability(maxdurability));
+		super(new Properties().durability(maxdurability));
 	}
 
 }
