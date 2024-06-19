@@ -49,6 +49,12 @@ public class CTDFuelItem extends CTDItem {
 		this.burnTicks = burnTicks;
 	}
 	
+	public CTDFuelItem(int maxStackSize, int burnTicks) 
+	{
+		super(new Properties().stacksTo(maxStackSize));
+		this.burnTicks = burnTicks;
+	}
+	
 	@Override
 	public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType)
 	{

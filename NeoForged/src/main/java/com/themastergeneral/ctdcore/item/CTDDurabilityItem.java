@@ -1,9 +1,10 @@
 /*
 	Project:	CTD Core 1.21
-	File:		CTDDurabilityItem.java
+	File:		com.themastergeneral.ctdcore.item.CTDDurabilityItem.java
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
+	
 				Copyright (c) 2024 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,22 +27,29 @@
 */
 package com.themastergeneral.ctdcore.item;
 
-import net.minecraft.util.RandomSource;
+import java.util.List;
+
+
+import com.themastergeneral.ctdcore.helpers.CTDConstants;
+import com.themastergeneral.ctdcore.helpers.ModUtils;
+
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class CTDDurabilityItem extends CTDItem {
 
-	private int maxDurability;
 
 	public CTDDurabilityItem(Properties properties, int durability) {
-		super(properties.durability(durability));
-		this.maxDurability = durability;
+		super(properties.durability(durability).stacksTo(1));
 	}
 	
 	public CTDDurabilityItem(int durability) 
 	{
-		super(new Properties().durability(durability));
-		this.maxDurability = durability;
+		super(new Properties().durability(durability).stacksTo(1));
 	}
 
 	@Override
@@ -51,19 +59,35 @@ public class CTDDurabilityItem extends CTDItem {
 		if(stack.getDamageValue() == stack.getMaxDamage())
 			return ItemStack.EMPTY;
 		else
+		{
+			if (stack.getMaxDamage() != CTDConstants.creativeDurability)
 				stack.hurtAndBreak(1, null, null);
 			return stack.copy();
+		}
     }
-
-	@Override
-	public int getMaxDamage(ItemStack stack)
-	{
-		return maxDurability;
-	}
 
 	@Override
 	public boolean hasCraftingRemainingItem(ItemStack stack)
 	{
 		return true;
 	}
+	
+	
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn) 
+	{
+		if (stack.isDamageableItem())
+			tooltip.add(ModUtils.displayString("Durability: " + ModUtils.returnFormattedNumber(stack.getDamageValue()) + "/" + ModUtils.returnFormattedNumber(stack.getMaxDamage())));
+	}
+	
+	@Override
+	public boolean isFoil(ItemStack stack) {
+		if (stack.isEnchanted())
+			return true;
+		else if (stack.getMaxDamage() == CTDConstants.creativeDurability)
+			return true;
+		else
+			return false;
+    }
 }

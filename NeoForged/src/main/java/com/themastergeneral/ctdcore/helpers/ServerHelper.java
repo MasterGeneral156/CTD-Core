@@ -27,6 +27,8 @@
 */
 package com.themastergeneral.ctdcore.helpers;
 
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 
 public class ServerHelper {	
@@ -38,7 +40,7 @@ public class ServerHelper {
 	 */
 	public static boolean isServerLevel(Level level) 
 	{
-		return !isClientLevel(level);
+		return (level instanceof ServerLevel);
 	}
 	
 	/**
@@ -49,6 +51,6 @@ public class ServerHelper {
 	 */
 	public static boolean isClientLevel(Level level) 
 	{
-		return level.isClientSide();
+		return (level instanceof ClientLevel);
 	}
 }

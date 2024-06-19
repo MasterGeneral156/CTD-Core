@@ -84,9 +84,7 @@ public class EntityHelper {
 	 */
 	public static boolean isMasterGeneral(String playerUUID)
 	{
-		if (playerUUID == CTDConstants.tmgUUID)
-			return true;
-		else if (playerUUID == CTDConstants.tmgAltUUID)
+		if ((playerUUID == CTDConstants.tmgUUID) || (playerUUID == CTDConstants.tmgAltUUID))
 			return true;
 		else
 			return false;

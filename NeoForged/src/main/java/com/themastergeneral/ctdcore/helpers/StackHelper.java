@@ -28,6 +28,7 @@
 //Stack handling helpers.
 package com.themastergeneral.ctdcore.helpers;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
 public class StackHelper {
@@ -55,5 +56,30 @@ public class StackHelper {
 			return 0;
 		else
 			return stack.getCount();
+	}
+	
+	/**
+	 * Check the Player and ItemStack to see if a cooldown is active
+	 * @param player Player
+	 * @param stack ItemStack
+	 * @since 1.20.5-2.4.10
+	 * @return boolean
+	 */
+	public static boolean isOnCooldown(Player player, ItemStack stack)
+	{
+		return player.getCooldowns().isOnCooldown(stack.getItem());
+	}
+	
+	/**
+	 * Internal function. Damages the stack and gives the player a cooldown.
+	 * @param player Player
+	 * @param stack ItemStack
+	 * @param cooldown Integer
+	 * @since 1.20.5-2.4.10
+	 */
+	public static void hurtStackAddCooldown(Player player, ItemStack stack, int cooldown)
+	{
+		stack.hurtAndBreak(1, player, null);
+		player.getCooldowns().addCooldown(stack.getItem(), cooldown);
 	}
 }

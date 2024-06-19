@@ -84,11 +84,24 @@ public class ModUtils
 	    else
 	        returned = nf.format(number);
 	    return returned;
-	}/**
+	}
+	
+	/**
+	 * Makes the input number into a friendly readable number (IE: 1,024; 300,000; 42,512,512)
+	 * @param number
+	 * @return Formatted Number (IE: 1,024; 300,000; 42,512,512)
+	 * @since 1.21-2.6.0
+	 */
+	public static String returnFormattedNumber(Number number)
+	{
+		return NumberFormat.getInstance().format(number);
+	}
+	
+	/**
 	 * Returns the current mod loader..........
 	 * @param string
 	 * @return Mod loader as string
-	 * @since 1.20.4-2.5.2
+	 * @since 1.20.1-2.4.9
 	 */
 	public static String getLoader()
 	{
@@ -99,7 +112,7 @@ public class ModUtils
 	 * Returns the current mod loader's version..........
 	 * @param string
 	 * @return Mod loader version as string
-	 * @since 1.20.4-2.5.2
+	 * @since 1.20.1-2.4.9
 	 */
 	public static String getLoaderVersion()
 	{
