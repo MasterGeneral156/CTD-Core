@@ -30,8 +30,16 @@ package com.themastergeneral.ctdcore.item;
 
 import javax.annotation.Nullable;
 
+import com.themastergeneral.ctdcore.helpers.ModUtils;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+
+import java.util.List;
 
 public class CTDFuelItem extends CTDItem {
 
@@ -54,6 +62,14 @@ public class CTDFuelItem extends CTDItem {
 		super(new Properties().stacksTo(maxStackSize));
 		this.burnTicks = burnTicks;
 	}
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn)
+	{
+		if (stack.getBurnTime(null) > 0)
+			tooltip.add(ModUtils.displayString("Burn Ticks: " + ModUtils.returnFormattedNumber(stack.getBurnTime(null))));
+	}
+
 	
 	@Override
 	public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType)
