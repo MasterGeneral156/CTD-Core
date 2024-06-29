@@ -31,6 +31,7 @@ package com.themastergeneral.ctdcore.item;
 import javax.annotation.Nullable;
 
 import com.themastergeneral.ctdcore.helpers.ModUtils;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -64,10 +65,13 @@ public class CTDFuelItem extends CTDItem {
 	}
 	@Override
 	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn)
-	{
-		if (stack.getBurnTime(null) > 0)
-			tooltip.add(ModUtils.displayString("Burn Ticks: " + ModUtils.returnFormattedNumber(stack.getBurnTime(null))));
+	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn) {
+		if (stack.getBurnTime(null) > 0) {
+			if (Screen.hasShiftDown())
+				tooltip.add(ModUtils.displayString("Burn Ticks: " + ModUtils.returnFormattedNumber(stack.getBurnTime(null))));
+			else
+				tooltip.add(ModUtils.displayString("Burn Ticks: " + ModUtils.returnShortenedNumber(stack.getBurnTime(null))));
+		}
 	}
 
 	

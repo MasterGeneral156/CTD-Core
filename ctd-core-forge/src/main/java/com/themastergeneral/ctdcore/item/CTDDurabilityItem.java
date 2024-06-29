@@ -32,6 +32,7 @@ import java.util.List;
 import com.themastergeneral.ctdcore.helpers.CTDConstants;
 import com.themastergeneral.ctdcore.helpers.ModUtils;
 
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -72,13 +73,7 @@ public class CTDDurabilityItem extends CTDItem {
 	}
 	
 	
-	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn) 
-	{
-		if (stack.isDamageableItem())
-			tooltip.add(ModUtils.displayString("Durability: " + ModUtils.returnFormattedNumber(stack.getDamageValue()) + "/" + ModUtils.returnFormattedNumber(stack.getMaxDamage())));
-	}
+
 	
 	@Override
 	public boolean isFoil(ItemStack stack) {
