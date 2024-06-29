@@ -29,9 +29,11 @@ package com.themastergeneral.ctdcore.helpers;
 
 import java.text.NumberFormat;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion;
+import org.jetbrains.annotations.NotNull;
 
 public class ModUtils 
 {
@@ -98,8 +100,7 @@ public class ModUtils
 	}
 	
 	/**
-	 * Returns the current mod loader..........
-	 * @param string
+	 * Returns the current mod loader.
 	 * @return Mod loader as string
 	 * @since 1.20.1-2.4.9
 	 */
@@ -109,13 +110,22 @@ public class ModUtils
 	}
 	
 	/**
-	 * Returns the current mod loader's version..........
-	 * @param string
+	 * Returns the current mod loader's version.
 	 * @return Mod loader version as string
 	 * @since 1.20.1-2.4.9
 	 */
 	public static String getLoaderVersion()
 	{
 		return NeoForgeVersion.getVersion();
+	}
+
+	/**
+	 * Returns the current Minecraft version
+	 * @return Minecraft version as string
+	 * @since 1.21-2.6.2
+	 */
+	public static @NotNull String getMCVersion()
+	{
+		return Minecraft.getInstance().getLaunchedVersion();
 	}
 }
