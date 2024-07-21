@@ -35,7 +35,12 @@ import net.minecraft.world.level.block.Block;
 
 public class WorldHelper 
 {
-	// Function used to find the block under an entity.
+	/**
+	 * Return block under entity
+	 * @param e Entity
+	 * @return boolean
+	 * @since 1.12
+	 */
 	public static Block findBlockUnderEntity(Entity e) 
 	{
 		int blockX = e.getBlockX();
