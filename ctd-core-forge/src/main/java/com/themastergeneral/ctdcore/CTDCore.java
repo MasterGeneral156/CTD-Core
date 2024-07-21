@@ -41,7 +41,7 @@ import com.themastergeneral.ctdcore.helpers.ModUtils;
 @Mod("ctdcore")
 public class CTDCore {
 	public static CTDCore instance;
-	public static final Logger LOGGER = LogManager.getLogger();
+	public static final Logger LOGGER = LogManager.getLogger("ctdcore");
 
 	public CTDCore() {
 		instance = this;
