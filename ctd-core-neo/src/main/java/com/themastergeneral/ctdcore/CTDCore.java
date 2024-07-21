@@ -39,7 +39,7 @@ import org.slf4j.Logger;
 @Mod("ctdcore")
 public class CTDCore {
 	public static CTDCore instance;
-	public static final Logger LOGGER = LogUtils.getLogger("ctdcore");
+	public static final Logger LOGGER = LogUtils.getLogger();
 
 	public CTDCore(IEventBus modEventBus) {
 		instance = this;
