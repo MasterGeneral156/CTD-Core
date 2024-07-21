@@ -83,6 +83,18 @@ public class StackHelper {
 	public static void hurtStackAddCooldown(Player player, ItemStack stack, int cooldown)
 	{
 		stack.hurtAndBreak(1, player, null);
-		player.getCooldowns().addCooldown(stack.getItem(), cooldown);
+		if (cooldown > 0)
+			player.getCooldowns().addCooldown(stack.getItem(), cooldown);
+	}
+
+	/**
+	 * Internal function. Damages the stack.
+	 * @param player Player
+	 * @param stack ItemStack
+	 * @since 1.21-2.6.3
+	 */
+	public static void hurtStack(Player player, ItemStack stack)
+	{
+		hurtStackAddCooldown(player, stack, 0);
 	}
 }
