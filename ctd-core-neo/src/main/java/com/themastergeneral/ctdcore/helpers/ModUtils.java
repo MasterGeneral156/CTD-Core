@@ -32,6 +32,7 @@ import java.text.NumberFormat;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraftforge.srgutils.MinecraftVersion;
 import net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion;
 import org.jetbrains.annotations.NotNull;
 
@@ -127,5 +128,39 @@ public class ModUtils
 	public static @NotNull String getMCVersion()
 	{
 		return Minecraft.getInstance().getLaunchedVersion();
+	}
+
+	/**
+	 * Create a string progress bar.
+	 * @return Minecraft version as string
+	 * @since 1.21.1-2.7.0
+	 */
+	public static String createProgressBar(int current, int max)
+	{
+		return createProgressBar(current, max, 30);
+	}
+
+	/**
+	 * Create a string progress bar, with a max bar length specified.
+	 * @return Minecraft version as string
+	 * @since 1.21.1-2.7.0
+	 */
+	public static String createProgressBar(int current, int max, int maxLength)
+	{
+		int barLength = Math.min(max, maxLength);  // Length of the progress bar
+		int progress = (int) (((double) current / max) * barLength);
+
+		StringBuilder bar = new StringBuilder();
+		bar.append("§r[");
+		for (int i = 0; i < barLength; i++) {
+			if (i < progress) {
+				bar.append("§2|");
+			} else {
+				bar.append("§4#");
+			}
+		}
+		bar.append("§r]");
+
+		return bar.toString();
 	}
 }

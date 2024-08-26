@@ -138,21 +138,7 @@ public class ModUtils
 	 */
 	public static String createProgressBar(int current, int max)
 	{
-		int barLength = Math.min(max, 30);  // Length of the progress bar
-		int progress = (int) (((double) current / max) * barLength);
-
-		StringBuilder bar = new StringBuilder();
-		bar.append("§r[");
-		for (int i = 0; i < barLength; i++) {
-			if (i < progress) {
-				bar.append("§2|");
-			} else {
-				bar.append("§4#");
-			}
-		}
-		bar.append("§r]");
-
-		return bar.toString();
+		return createProgressBar(current, max, 30);
 	}
 
 	/**
