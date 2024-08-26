@@ -130,4 +130,52 @@ public class ModUtils
 	{
 		return Minecraft.getInstance().getLaunchedVersion();
 	}
+
+	/**
+	 * Create a string progress bar.
+	 * @return Minecraft version as string
+	 * @since 1.21.1-2.7.0
+	 */
+	public static String createProgressBar(int current, int max)
+	{
+		int barLength = Math.min(max, 30);  // Length of the progress bar
+		int progress = (int) (((double) current / max) * barLength);
+
+		StringBuilder bar = new StringBuilder();
+		bar.append("§r[");
+		for (int i = 0; i < barLength; i++) {
+			if (i < progress) {
+				bar.append("§2|");
+			} else {
+				bar.append("§4#");
+			}
+		}
+		bar.append("§r]");
+
+		return bar.toString();
+	}
+
+	/**
+	 * Create a string progress bar, with a max bar length specified.
+	 * @return Minecraft version as string
+	 * @since 1.21.1-2.7.0
+	 */
+	public static String createProgressBar(int current, int max, int maxLength)
+	{
+		int barLength = Math.min(max, maxLength);  // Length of the progress bar
+		int progress = (int) (((double) current / max) * barLength);
+
+		StringBuilder bar = new StringBuilder();
+		bar.append("§r[");
+		for (int i = 0; i < barLength; i++) {
+			if (i < progress) {
+				bar.append("§2§l|");
+			} else {
+				bar.append("§4|");
+			}
+		}
+		bar.append("§r]");
+
+		return bar.toString();
+	}
 }
