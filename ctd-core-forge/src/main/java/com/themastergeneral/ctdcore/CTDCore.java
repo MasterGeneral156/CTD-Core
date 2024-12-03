@@ -43,10 +43,10 @@ public class CTDCore {
 	public static CTDCore instance;
 	public static final Logger LOGGER = LogManager.getLogger("ctdcore");
 
-	public CTDCore() {
+	public CTDCore(FMLJavaModLoadingContext context) {
 		instance = this;
         // Register the setup method for modloading
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = context.getModEventBus();
         modEventBus.addListener(this::setup);
 
         MinecraftForge.EVENT_BUS.register(this);

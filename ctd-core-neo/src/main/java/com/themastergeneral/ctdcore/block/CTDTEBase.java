@@ -33,6 +33,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.client.model.generators.IGeneratedBlockState;
+import net.neoforged.neoforge.common.property.Properties;
 
 public abstract class CTDTEBase<TE extends BlockEntity, IBlockAccess> extends CTDBlock {
 

@@ -53,7 +53,7 @@ public class CTDDurabilityItem extends CTDItem {
 	}
 
 	@Override
-	public ItemStack getCraftingRemainingItem(ItemStack itemStack)
+	public ItemStack getCraftingRemainder(ItemStack itemStack)
     {
 		ItemStack stack = itemStack.copy();
 		if(stack.getDamageValue() == stack.getMaxDamage())
@@ -67,14 +67,11 @@ public class CTDDurabilityItem extends CTDItem {
     }
 
 	@Override
-	public boolean hasCraftingRemainingItem(ItemStack stack)
+	public boolean hasCustomEntity(ItemStack stack)
 	{
 		return true;
 	}
-	
-	
 
-	
 	@Override
 	public boolean isFoil(ItemStack stack) {
 		if (stack.isEnchanted())

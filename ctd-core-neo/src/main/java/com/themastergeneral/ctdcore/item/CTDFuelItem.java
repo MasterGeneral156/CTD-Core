@@ -28,8 +28,6 @@
 //Fuel item
 package com.themastergeneral.ctdcore.item;
 
-import javax.annotation.Nullable;
-
 import com.themastergeneral.ctdcore.helpers.ModUtils;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
@@ -37,10 +35,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.block.entity.FuelValues;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.neoforge.common.extensions.IItemStackExtension;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+import java.util.Objects;
 
 public class CTDFuelItem extends CTDItem {
 
@@ -65,18 +67,18 @@ public class CTDFuelItem extends CTDItem {
 	}
 	@Override
 	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn) {
-		if (stack.getBurnTime(null) > 0) {
+	public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flagIn) {
+		if (stack.getBurnTime(null, context.level().fuelValues()) > 0)
+		{
 			if (Screen.hasShiftDown())
-				tooltip.add(ModUtils.displayString("Burn Ticks: " + ModUtils.returnFormattedNumber(stack.getBurnTime(null))));
+				tooltip.add(ModUtils.displayString("Burn Ticks: " + ModUtils.returnFormattedNumber(stack.getBurnTime(null, context.level().fuelValues()))));
 			else
-				tooltip.add(ModUtils.displayString("Burn Ticks: " + ModUtils.returnShortenedNumber(stack.getBurnTime(null))));
+				tooltip.add(ModUtils.displayString("Burn Ticks: " + ModUtils.returnShortenedNumber(stack.getBurnTime(null, context.level().fuelValues()))));
 		}
 	}
 
-	
 	@Override
-	public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType)
+	public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType, FuelValues fuelValues)
 	{
 		return this.burnTicks;
 	}

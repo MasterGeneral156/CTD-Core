@@ -67,7 +67,7 @@ public class StackHelper {
 	 */
 	public static boolean isOnCooldown(Player player, ItemStack stack)
 	{
-		return player.getCooldowns().isOnCooldown(stack.getItem());
+		return player.getCooldowns().isOnCooldown(stack);
 	}
 	
 	/**
@@ -81,7 +81,7 @@ public class StackHelper {
 	{
 		stack.hurtAndBreak(1, player, null);
 		if (cooldown > 0)
-			player.getCooldowns().addCooldown(stack.getItem(), cooldown);
+			player.getCooldowns().addCooldown(stack, cooldown);
 	}
 
 	/**
