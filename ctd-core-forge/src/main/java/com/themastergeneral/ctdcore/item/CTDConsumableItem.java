@@ -27,26 +27,27 @@
 */
 package com.themastergeneral.ctdcore.item;
 
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 
 public class CTDConsumableItem extends CTDItem {
 
-	public CTDConsumableItem(int hungerFed, float saturation) {
-		super(new Item.Properties().food(new FoodProperties.Builder()
+	public CTDConsumableItem(ResourceKey<Item> key, int hungerFed, float saturation) {
+		super(key, new Item.Properties().food(new FoodProperties.Builder()
 				.nutrition(hungerFed)
 				.saturationModifier(saturation)
 				.build()));
 	}
 	
-	public CTDConsumableItem(float saturation) {
-		super(new Item.Properties().food(new FoodProperties.Builder()
+	public CTDConsumableItem(ResourceKey<Item> key, float saturation) {
+		super(key, new Item.Properties().food(new FoodProperties.Builder()
 				.saturationModifier(saturation)
 				.build()));
 	}
 	
-	public CTDConsumableItem(int hungerFed) {
-		super(new Item.Properties().food(new FoodProperties.Builder()
+	public CTDConsumableItem(ResourceKey<Item> key, int hungerFed) {
+		super(key, new Item.Properties().food(new FoodProperties.Builder()
 				.nutrition(hungerFed)
 				.build()));
 	}

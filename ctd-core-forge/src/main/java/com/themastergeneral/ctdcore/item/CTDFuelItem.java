@@ -33,6 +33,7 @@ import javax.annotation.Nullable;
 import com.themastergeneral.ctdcore.helpers.ModUtils;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -46,21 +47,21 @@ public class CTDFuelItem extends CTDItem {
 
 	private final int burnTicks;
 	
-	public CTDFuelItem(Properties properties, int burnTicks) 
+	public CTDFuelItem(ResourceKey<Item> key, Properties properties, int burnTicks)
 	{
-		super(properties);
+		super(key, properties);
 		this.burnTicks = burnTicks;
 	}
 	
-	public CTDFuelItem(int burnTicks) 
+	public CTDFuelItem(ResourceKey<Item> key, int burnTicks)
 	{
-		super(new Properties());
+		super(key, new Properties().setId(key));
 		this.burnTicks = burnTicks;
 	}
 	
-	public CTDFuelItem(int maxStackSize, int burnTicks) 
+	public CTDFuelItem(ResourceKey<Item> key, int maxStackSize, int burnTicks)
 	{
-		super(new Properties().stacksTo(maxStackSize));
+		super(key, new Properties().stacksTo(maxStackSize).setId(key));
 		this.burnTicks = burnTicks;
 	}
 

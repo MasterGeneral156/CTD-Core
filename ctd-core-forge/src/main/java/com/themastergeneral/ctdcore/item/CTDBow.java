@@ -28,19 +28,21 @@
 //Extend to create a bow that uses ammo from ItemArrow
 package com.themastergeneral.ctdcore.item;
 
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 public class CTDBow extends BowItem {
 	protected int drawspeed; // How long it should take to draw the bow completely.
 	
-	public CTDBow(Properties builder, int drawspeed, int maxdurability) {
-		super(builder.durability(maxdurability));
+	public CTDBow(ResourceKey<Item> key, Properties builder, int drawspeed, int maxdurability) {
+		super(builder.durability(maxdurability).setId(key));
 		this.drawspeed = drawspeed;
 	}
 	
-	public CTDBow(int drawspeed, int maxdurability) {
-		super(new Properties().durability(maxdurability));
+	public CTDBow(ResourceKey<Item> key, int drawspeed, int maxdurability) {
+		super(new Properties().durability(maxdurability).setId(key));
 		this.drawspeed = drawspeed;
 	}
 

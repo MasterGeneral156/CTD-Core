@@ -34,6 +34,7 @@ import com.themastergeneral.ctdcore.helpers.ModUtils;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -43,13 +44,13 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class CTDDurabilityItem extends CTDItem {
 
 
-	public CTDDurabilityItem(Properties properties, int durability) {
-		super(properties.durability(durability).stacksTo(1));
+	public CTDDurabilityItem(ResourceKey<Item> key, Properties properties, int durability) {
+		super(key, properties.durability(durability).stacksTo(1));
 	}
 	
-	public CTDDurabilityItem(int durability) 
+	public CTDDurabilityItem(ResourceKey<Item> key, int durability)
 	{
-		super(new Properties().durability(durability).stacksTo(1));
+		super(key, new Properties().durability(durability).stacksTo(1));
 	}
 
 	@Override

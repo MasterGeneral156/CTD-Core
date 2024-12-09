@@ -28,18 +28,20 @@
 //Shield item
 package com.themastergeneral.ctdcore.item;
 
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ShieldItem;
 
 public class CTDShield extends ShieldItem {
 	
-	public CTDShield(Properties builder, int maxdurability) 
+	public CTDShield(ResourceKey<Item> key, Properties builder, int maxdurability)
 	{
-		super(builder.durability(maxdurability));
+		super(builder.durability(maxdurability).setId(key));
 	}
 	
-	public CTDShield(int maxdurability) 
+	public CTDShield(ResourceKey<Item> key, int maxdurability)
 	{
-		super(new Properties().durability(maxdurability));
+		super(new Properties().durability(maxdurability).setId(key));
 	}
 
 }

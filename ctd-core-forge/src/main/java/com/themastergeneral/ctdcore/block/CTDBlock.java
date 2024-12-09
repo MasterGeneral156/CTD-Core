@@ -27,12 +27,13 @@
 */
 package com.themastergeneral.ctdcore.block;
 
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 
 public class CTDBlock extends Block {
 
-	public CTDBlock(Properties materialIn) 
+	public CTDBlock(ResourceKey<Block> key, Properties materialIn)
 	{
-		super(materialIn);
+		super(materialIn.setId(key));
 	}
 }
