@@ -28,20 +28,22 @@
 //Extend to create an arrow.
 package com.themastergeneral.ctdcore.item;
 
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ArrowItem;
+import net.minecraft.world.item.Item;
 
 public class CTDArrow extends ArrowItem {
-	
-	public CTDArrow(Properties builder) {
-		super(builder);
+
+	public CTDArrow(ResourceKey<Item> key, Properties builder) {
+		super(builder.setId(key));
 	}
-	
-	public CTDArrow() {
-		super(new Properties());
+
+	public CTDArrow(ResourceKey<Item> key) {
+		super(new Properties().setId(key));
 	}
-	
-	public CTDArrow(int stackSize) {
-		super(new Properties().stacksTo(stackSize));
+
+	public CTDArrow(ResourceKey<Item> key, int stackSize) {
+		super(new Properties().stacksTo(stackSize).setId(key));
 	}
 
 }

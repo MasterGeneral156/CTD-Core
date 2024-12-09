@@ -26,20 +26,11 @@
 */
 package com.themastergeneral.ctdcore.item;
 
-import java.util.List;
-
-
 import com.themastergeneral.ctdcore.helpers.CTDConstants;
-import com.themastergeneral.ctdcore.helpers.ModUtils;
 
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class CTDDurabilityItem extends CTDItem {
 

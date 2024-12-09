@@ -28,20 +28,19 @@
 //Base item.
 package com.themastergeneral.ctdcore.item;
 
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 
 public class CTDItem extends Item {
-	
-	public CTDItem(Properties properties) {
-		super(properties);
-	}
-	
-	public CTDItem() {
-		super(new Properties());
-	}
-	
-	public CTDItem(int maxStackSize) {
-		super(new Properties().stacksTo(maxStackSize));
+	public CTDItem(ResourceKey<Item> key, Properties properties) {
+		super(properties.setId(key));
 	}
 
+	public CTDItem(ResourceKey<Item> key) {
+		super(new Properties().setId(key));
+	}
+
+	public CTDItem(ResourceKey<Item> key, int maxStackSize) {
+		super(new Properties().stacksTo(maxStackSize).setId(key));
+	}
 }

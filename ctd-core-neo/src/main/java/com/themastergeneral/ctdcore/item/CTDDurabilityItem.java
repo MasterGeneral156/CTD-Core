@@ -27,35 +27,27 @@
 */
 package com.themastergeneral.ctdcore.item;
 
-import java.util.List;
-
-
 import com.themastergeneral.ctdcore.helpers.CTDConstants;
-import com.themastergeneral.ctdcore.helpers.ModUtils;
 
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
 
 public class CTDDurabilityItem extends CTDItem {
 
 
-	public CTDDurabilityItem(Properties properties, int durability) {
-		super(properties.durability(durability).stacksTo(1));
+	public CTDDurabilityItem(ResourceKey<Item> key, Properties properties, int durability) {
+		super(key, properties.durability(durability).stacksTo(1));
 	}
-	
-	public CTDDurabilityItem(int durability) 
+
+	public CTDDurabilityItem(ResourceKey<Item> key, int durability)
 	{
-		super(new Properties().durability(durability).stacksTo(1));
+		super(key, new Properties().durability(durability).stacksTo(1));
 	}
 
 	@Override
 	public ItemStack getCraftingRemainder(ItemStack itemStack)
-    {
+	{
 		ItemStack stack = itemStack.copy();
 		if(stack.getDamageValue() == stack.getMaxDamage())
 			return ItemStack.EMPTY;
@@ -65,7 +57,7 @@ public class CTDDurabilityItem extends CTDItem {
 				stack.hurtAndBreak(1, null, null);
 			return stack.copy();
 		}
-    }
+	}
 
 	@Override
 	public boolean hasCustomEntity(ItemStack stack)
@@ -73,18 +65,6 @@ public class CTDDurabilityItem extends CTDItem {
 		return true;
 	}
 
-
-	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn) {
-		if (stack.isDamageableItem()) {
-			if (Screen.hasShiftDown())
-				tooltip.add(ModUtils.displayString("Durability: " + ModUtils.returnFormattedNumber(stack.getDamageValue()) + "/" + ModUtils.returnFormattedNumber(stack.getMaxDamage())));
-			else
-				tooltip.add(ModUtils.displayString("Durability: " + ModUtils.returnShortenedNumber(stack.getDamageValue()) + "/" + ModUtils.returnShortenedNumber(stack.getMaxDamage())));
-		}
-	}
-	
 	@Override
 	public boolean isFoil(ItemStack stack) {
 		if (stack.isEnchanted())
@@ -93,5 +73,5 @@ public class CTDDurabilityItem extends CTDItem {
 			return true;
 		else
 			return false;
-    }
+	}
 }

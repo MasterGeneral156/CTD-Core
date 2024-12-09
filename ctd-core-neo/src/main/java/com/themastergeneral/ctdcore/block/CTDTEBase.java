@@ -30,15 +30,17 @@ package com.themastergeneral.ctdcore.block;
 import javax.annotation.Nullable;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.client.model.generators.IGeneratedBlockState;
 import net.neoforged.neoforge.common.property.Properties;
 
 public abstract class CTDTEBase<TE extends BlockEntity, IBlockAccess> extends CTDBlock {
 
-	public CTDTEBase(Properties material) {
-		super(material);
+	public CTDTEBase(ResourceKey<Block> key, Properties material) {
+		super(key, material);
 	}
 	
 	public abstract Class<TE> getTileEntityClass();
