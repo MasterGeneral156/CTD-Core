@@ -29,7 +29,7 @@ package com.themastergeneral.ctdcore.helpers;
 
 import java.text.NumberFormat;
 
-import net.minecraft.client.Minecraft;
+import net.minecraft.SharedConstants;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion;
@@ -126,7 +126,8 @@ public class ModUtils
 	 */
 	public static @NotNull String getMCVersion()
 	{
-		return Minecraft.getInstance().getLaunchedVersion();
+		//return MinecraftServer.getServerVersion();
+		return SharedConstants.getCurrentVersion().getName();
 	}
 
 	/**

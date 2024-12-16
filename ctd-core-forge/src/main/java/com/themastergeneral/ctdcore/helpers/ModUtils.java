@@ -29,11 +29,9 @@ package com.themastergeneral.ctdcore.helpers;
 
 import java.text.NumberFormat;
 
-import net.minecraft.client.Minecraft;
+import net.minecraft.SharedConstants;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.versions.forge.ForgeVersion;
 import org.jetbrains.annotations.NotNull;
 
@@ -128,7 +126,8 @@ public class ModUtils
 	 */
 	public static @NotNull String getMCVersion()
 	{
-		return Minecraft.getInstance().getLaunchedVersion();
+		//return MinecraftServer.getServerVersion();
+		return SharedConstants.getCurrentVersion().getName();
 	}
 
 	/**

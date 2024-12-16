@@ -48,7 +48,7 @@ public class CTDCore {
 	
 	private void setup(final FMLCommonSetupEvent event)
     {
-		LOGGER.info("CTD Core for is launching for " + ModUtils.getLoader() + " v" + ModUtils.getLoaderVersion());
+		LOGGER.info("CTD Core is launching using " + ModUtils.getLoader() + " v" + ModUtils.getLoaderVersion() + " for MC " + ModUtils.getMCVersion());
     }
 
 }
