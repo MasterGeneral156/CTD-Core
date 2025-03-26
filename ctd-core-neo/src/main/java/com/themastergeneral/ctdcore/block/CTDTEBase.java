@@ -34,8 +34,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.neoforged.neoforge.client.model.generators.IGeneratedBlockState;
-import net.neoforged.neoforge.common.property.Properties;
 
 public abstract class CTDTEBase<TE extends BlockEntity, IBlockAccess> extends CTDBlock {
 
@@ -49,12 +47,5 @@ public abstract class CTDTEBase<TE extends BlockEntity, IBlockAccess> extends CT
 	public TE getTileEntity(IBlockAccess world, BlockPos pos) {
 		return (TE)((Level) world).getBlockEntity(pos);
 	}
-	
-	public boolean hasTileEntity(IGeneratedBlockState state) {
-		return true;
-	}
-	
-	@Nullable
-	public abstract TE createTileEntity(Level world, IGeneratedBlockState state);
 
 }
