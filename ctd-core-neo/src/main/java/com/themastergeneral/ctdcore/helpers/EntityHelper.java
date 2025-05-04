@@ -40,7 +40,7 @@ public class EntityHelper {
 	 */
 	public static ItemStack getPlayerHelmet(Player player)
 	{
-		return player.getInventory().getArmor(CTDConstants.helmetSlot);
+		return player.getInventory().getItem(CTDConstants.helmetSlot);
 	}
 	
 	/**
@@ -51,7 +51,7 @@ public class EntityHelper {
 	 */
 	public static ItemStack getPlayerChest(Player player)
 	{
-		return player.getInventory().getArmor(CTDConstants.chestSlot);
+		return player.getInventory().getItem(CTDConstants.chestSlot);
 	}
 	
 	/**
@@ -62,7 +62,7 @@ public class EntityHelper {
 	 */
 	public static ItemStack getPlayerLegs(Player player)
 	{
-		return player.getInventory().getArmor(CTDConstants.legSlot);
+		return player.getInventory().getItem(CTDConstants.legSlot);
 	}
 	
 	/**
@@ -73,7 +73,7 @@ public class EntityHelper {
 	 */
 	public static ItemStack getPlayerBoots(Player player)
 	{
-		return player.getInventory().getArmor(CTDConstants.bootSlot);
+		return player.getInventory().getItem(CTDConstants.bootSlot);
 	}
 	
 	/**

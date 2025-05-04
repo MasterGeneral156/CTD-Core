@@ -80,7 +80,7 @@ public class WorldHelper
 	 */
 	public static boolean isDaytime(Level level)
 	{
-		return level.isDay();
+		return level.isBrightOutside();
 	}
 	
 	/**
@@ -91,7 +91,7 @@ public class WorldHelper
 	 */
 	public static boolean isNighttime(Level level)
 	{
-		return level.isNight();
+		return level.isDarkOutside();
 	}
 	
 	/**
