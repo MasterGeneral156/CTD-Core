@@ -65,7 +65,7 @@ public class CTDFuelItem extends CTDItem {
 		this.burnTicks = burnTicks;
 	}
 
-	@Override
+	/*@Override
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn) {
 		if (stack.getBurnTime(null) > 0) {
@@ -74,7 +74,7 @@ public class CTDFuelItem extends CTDItem {
 			else
 				tooltip.add(ModUtils.displayString("Burn Ticks: " + ModUtils.returnShortenedNumber(stack.getBurnTime(null))));
 		}
-	}
+	}*/
 	
 	@Override
 	public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType)
