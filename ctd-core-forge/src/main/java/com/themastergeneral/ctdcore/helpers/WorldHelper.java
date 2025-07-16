@@ -47,7 +47,7 @@ public class WorldHelper
 		int blockY = e.getBlockY();
 		int blockZ = e.getBlockZ();
 		BlockPos blockpos = new BlockPos(blockX, blockY, blockZ);
-		return e.getCommandSenderWorld().getBlockState(blockpos).getBlock();
+		return e.level().getBlockState(blockpos).getBlock();
 	}
 	
 	/**

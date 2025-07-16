@@ -36,6 +36,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
+import java.util.Objects;
+
 public class CTDDurabilityItem extends CTDItem {
 
 
@@ -57,7 +59,7 @@ public class CTDDurabilityItem extends CTDItem {
 		else
 		{
 			if (stack.getMaxDamage() != CTDConstants.creativeDurability)
-				stack.hurtAndBreak(1, null, null);
+				stack.hurtAndBreak(1, null, Objects.requireNonNull(stack.getEquipmentSlot()));
 			return stack.copy();
 		}
 	}

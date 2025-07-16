@@ -53,7 +53,7 @@ public class CTDDurabilityItem extends CTDItem {
 		else
 		{
 			if (stack.getMaxDamage() != CTDConstants.creativeDurability)
-				stack.hurtAndBreak(1, null, null);
+				stack.hurtAndBreak(1, null, stack.getEquipmentSlot());
 			return stack.copy();
 		}
     }

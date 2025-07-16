@@ -130,7 +130,7 @@ public class ModUtils
 	public static @NotNull String getMCVersion()
 	{
 		//return MinecraftServer.getServerVersion();
-		return SharedConstants.getCurrentVersion().getName();
+		return SharedConstants.getCurrentVersion().name();
 	}
 
 	/**

@@ -33,6 +33,8 @@ package com.themastergeneral.ctdcore.helpers;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
+import java.util.Objects;
+
 public class StackHelper {
 	
 	/**
@@ -81,7 +83,7 @@ public class StackHelper {
 	 */
 	public static void hurtStackAddCooldown(Player player, ItemStack stack, int cooldown)
 	{
-		stack.hurtAndBreak(1, player, null);
+		stack.hurtAndBreak(1, player, Objects.requireNonNull(stack.getEquipmentSlot()));
 		if (cooldown > 0)
 			player.getCooldowns().addCooldown(stack, cooldown);
 	}

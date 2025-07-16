@@ -28,7 +28,6 @@
 package com.themastergeneral.ctdcore;
 
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -46,10 +45,9 @@ public class CTDCore {
 	public CTDCore(FMLJavaModLoadingContext context) {
 		instance = this;
         // Register the setup method for modloading
-        IEventBus modEventBus = context.getModEventBus();
-        modEventBus.addListener(this::setup);
+        var modBusGroup = context.getModBusGroup();
 
-        MinecraftForge.EVENT_BUS.register(this);
+        FMLCommonSetupEvent.getBus(modBusGroup).addListener(this::setup);
     }
 	
 	private void setup(final FMLCommonSetupEvent event)
