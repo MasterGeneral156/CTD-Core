@@ -6,7 +6,7 @@ package com.themastergeneral.ctdcore.helpers;
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2024 TheMasterGeneral
+				Copyright (c) 2025 TheMasterGeneral
 
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal

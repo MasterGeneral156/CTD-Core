@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.20
+	Project:	CTD Core 1.21
 	File:		com.themastergeneral.ctdcore.block.CTDBlock
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2023 TheMasterGeneral
+				Copyright (c) 2025 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -36,4 +36,9 @@ public class CTDBlock extends Block {
 	{
 		super(materialIn.setId(key));
 	}
+
+    public CTDBlock(Properties materialIn)
+    {
+        super(materialIn);
+    }
 }

@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.19
+	Project:	CTD Core 1.21
 	File:		com.themastergeneral.ctdcore.block.CTDTEBase
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2023 TheMasterGeneral
+				Copyright (c) 2025 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -41,6 +41,10 @@ public abstract class CTDTEBase<TE extends BlockEntity, IBlockAccess> extends CT
 	public CTDTEBase(ResourceKey<Block> key, Properties material) {
 		super(key, material);
 	}
+
+    public CTDTEBase(Properties material) {
+        super(material);
+    }
 	
 	public abstract Class<TE> getTileEntityClass();
 	

@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.19
+	Project:	CTD Core 1.21
 	File:		com.themastergeneral.ctdcore.item.CTDItem
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2023 TheMasterGeneral
+				Copyright (c) 2025 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -43,4 +43,6 @@ public class CTDItem extends Item {
 	public CTDItem(ResourceKey<Item> key, int maxStackSize) {
 		super(new Properties().stacksTo(maxStackSize).setId(key));
 	}
+
+    public CTDItem(Properties properties) { super(properties);}
 }

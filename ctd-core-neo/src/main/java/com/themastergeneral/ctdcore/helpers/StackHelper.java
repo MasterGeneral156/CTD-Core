@@ -1,34 +1,33 @@
-/**
- * Project		CTD Core 1.21 - Neo
- * File			com.themastergeneral.ctdcore.helpers.StackHelper.java
- * Author		TheMasterGeneral
- * Website		https://github.com/MasterGeneral156/CTD-Core
- * 				https://www.curseforge.com/minecraft/mc-mods/ctd-core
- * 				https://modrinth.com/mod/ctd-core
- * 				https://maven.chivalryengine.com/
- * 	License		MIT License
- *
- * 				Copyright (c) 2025 TheMasterGeneral
- *
- * 				Permission is hereby granted, free of charge, to any person obtaining a copy
- * 				of this software and associated documentation files (the "Software"), to deal
- * 				in the Software without restriction, including without limitation the rights
- * 				to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * 				copies of the Software, and to permit persons to whom the Software is
- * 				furnished to do so, subject to the following conditions:
- *
- * 				The above copyright notice and this permission notice shall be included in all
- * 				copies or substantial portions of the Software.
- *
- * 				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * 				IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * 				FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * 				AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * 				LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * 				OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * 				SOFTWARE.
- */
+/*
+	Project:	CTD Core 1.21
+	File:		com.themastergeneral.ctdcore.helpers.StackHelper
+	Author:		TheMasterGeneral
+	Website: 	https://github.com/MasterGeneral156/CTD-Core
+	License:	MIT License
+
+				Copyright (c) 2025 TheMasterGeneral
+
+				Permission is hereby granted, free of charge, to any person obtaining a copy
+				of this software and associated documentation files (the "Software"), to deal
+				in the Software without restriction, including without limitation the rights
+				to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+				copies of the Software, and to permit persons to whom the Software is
+				furnished to do so, subject to the following conditions:
+
+				The above copyright notice and this permission notice shall be included in all
+				copies or substantial portions of the Software.
+
+				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+				IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+				FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+				AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+				LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+				OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+				SOFTWARE.
+*/
+//Stack handling helpers.
 package com.themastergeneral.ctdcore.helpers;
+
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -36,66 +35,66 @@ import net.minecraft.world.item.ItemStack;
 import java.util.Objects;
 
 public class StackHelper {
-	
-	/**
-	 * Return if input ItemStack is a non-null, valid ItemStack.
-	 * @param stack ItemStack to test
-	 * @since 1.12.2
-	 * @return boolean
-	 */
-	public static boolean isValid(ItemStack stack) 
-	{
-		return stack != null && !stack.isEmpty();
-	}
 
-	/**
-	 * Return the size of an itemstack
-	 * @param stack ItemStack to test
-	 * @since 1.12.2
-	 * @return boolean
-	 */
-	public static int getStackSize(ItemStack stack) 
-	{
-		if (!isValid(stack))
-			return 0;
-		else
-			return stack.getCount();
-	}
-	
-	/**
-	 * Check the Player and ItemStack to see if a cooldown is active
-	 * @param player Player
-	 * @param stack ItemStack
-	 * @since 1.20.5-2.4.10
-	 * @return boolean
-	 */
-	public static boolean isOnCooldown(Player player, ItemStack stack)
-	{
-		return player.getCooldowns().isOnCooldown(stack);
-	}
-	
-	/**
-	 * Internal function. Damages the stack and gives the player a cooldown.
-	 * @param player Player
-	 * @param stack ItemStack
-	 * @param cooldown Integer
-	 * @since 1.20.5-2.4.10
-	 */
-	public static void hurtStackAddCooldown(Player player, ItemStack stack, int cooldown)
-	{
-		stack.hurtAndBreak(1, player, Objects.requireNonNull(stack.getEquipmentSlot()));
-		if (cooldown > 0)
-			player.getCooldowns().addCooldown(stack, cooldown);
-	}
+    /**
+     * Return if input ItemStack is a non-null, valid ItemStack.
+     * @param stack ItemStack to test
+     * @since 1.12.2
+     * @return boolean
+     */
+    public static boolean isValid(ItemStack stack)
+    {
+        return stack != null && !stack.isEmpty();
+    }
 
-	/**
-	 * Internal function. Damages the stack.
-	 * @param player Player
-	 * @param stack ItemStack
-	 * @since 1.21-2.6.3
-	 */
-	public static void hurtStack(Player player, ItemStack stack)
-	{
-		hurtStackAddCooldown(player, stack, 0);
-	}
+    /**
+     * Return the size of an itemstack
+     * @param stack ItemStack to test
+     * @since 1.12.2
+     * @return boolean
+     */
+    public static int getStackSize(ItemStack stack)
+    {
+        if (!isValid(stack))
+            return 0;
+        else
+            return stack.getCount();
+    }
+
+    /**
+     * Check the Player and ItemStack to see if a cooldown is active
+     * @param player Player
+     * @param stack ItemStack
+     * @since 1.20.5-2.4.10
+     * @return boolean
+     */
+    public static boolean isOnCooldown(Player player, ItemStack stack)
+    {
+        return player.getCooldowns().isOnCooldown(stack);
+    }
+
+    /**
+     * Internal function. Damages the stack and gives the player a cooldown.
+     * @param player Player
+     * @param stack ItemStack
+     * @param cooldown Integer
+     * @since 1.20.5-2.4.10
+     */
+    public static void hurtStackAddCooldown(Player player, ItemStack stack, int cooldown)
+    {
+        stack.hurtAndBreak(1, player, Objects.requireNonNull(stack.getEquipmentSlot()));
+        if (cooldown > 0)
+            player.getCooldowns().addCooldown(stack, cooldown);
+    }
+
+    /**
+     * Internal function. Damages the stack.
+     * @param player Player
+     * @param stack ItemStack
+     * @since 1.21-2.6.3
+     */
+    public static void hurtStack(Player player, ItemStack stack)
+    {
+        hurtStackAddCooldown(player, stack, 0);
+    }
 }

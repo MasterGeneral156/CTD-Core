@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.19
+	Project:	CTD Core 1.21
 	File:		com.themastergeneral.ctdcore.item.CTDArrow
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2023 TheMasterGeneral
+				Copyright (c) 2025 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -45,5 +45,17 @@ public class CTDArrow extends ArrowItem {
 	public CTDArrow(ResourceKey<Item> key, int stackSize) {
 		super(new Properties().stacksTo(stackSize).setId(key));
 	}
+
+    public CTDArrow(Properties builder) {
+        super(builder);
+    }
+
+    public CTDArrow() {
+        super(new Properties());
+    }
+
+    public CTDArrow(int stackSize) {
+        super(new Properties().stacksTo(stackSize));
+    }
 
 }

@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.20
+	Project:	CTD Core 1.21
 	File:		com.themastergeneral.ctdcore.item.CTDFuelItem
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2023 TheMasterGeneral
+				Copyright (c) 2025 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -30,18 +30,10 @@ package com.themastergeneral.ctdcore.item;
 
 import javax.annotation.Nullable;
 
-import com.themastergeneral.ctdcore.helpers.ModUtils;
-import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-
-import java.util.List;
 
 public class CTDFuelItem extends CTDItem {
 
@@ -52,6 +44,12 @@ public class CTDFuelItem extends CTDItem {
 		super(key, properties);
 		this.burnTicks = burnTicks;
 	}
+
+    public CTDFuelItem(Properties properties, int burnTicks)
+    {
+        super(properties);
+        this.burnTicks = burnTicks;
+    }
 	
 	public CTDFuelItem(ResourceKey<Item> key, int burnTicks)
 	{
