@@ -32,7 +32,8 @@ import java.text.NumberFormat;
 import net.minecraft.SharedConstants;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion;
+import net.neoforged.fml.loading.FMLLoader;
+import net.neoforged.neoforge.internal.BrandingControl;
 import org.jetbrains.annotations.NotNull;
 
 public class ModUtils 
@@ -106,7 +107,7 @@ public class ModUtils
 	 */
 	public static String getLoader()
 	{
-		return NeoForgeVersion.MOD_ID;
+		return BrandingControl.BRANDING_NAME;
 	}
 	
 	/**
@@ -116,7 +117,8 @@ public class ModUtils
 	 */
 	public static String getLoaderVersion()
 	{
-		return NeoForgeVersion.getVersion();
+		String version = FMLLoader.class.getPackage().getImplementationVersion();
+        return version != null ? version : "Unknown";
 	}
 
 	/**
