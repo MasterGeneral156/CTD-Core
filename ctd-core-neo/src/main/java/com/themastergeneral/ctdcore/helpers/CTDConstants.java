@@ -32,12 +32,14 @@ import net.minecraft.world.entity.EquipmentSlot;
 public class CTDConstants {
 
     //Equipment slots
-    public static int helmetSlot	= EquipmentSlot.HEAD.getIndex();
-    public static int chestSlot		= EquipmentSlot.CHEST.getIndex();
-    public static int legSlot		= EquipmentSlot.LEGS.getIndex();
-    public static int bootSlot		= EquipmentSlot.FEET.getIndex();
-    public static int offHandSlot	= EquipmentSlot.OFFHAND.getIndex();
-    public static int mainHandSlot	= EquipmentSlot.MAINHAND.getIndex();
+    public static int helmetSlot	    = EquipmentSlot.HEAD.getIndex();
+    public static int chestSlot		    = EquipmentSlot.CHEST.getIndex();
+    public static int legSlot		    = EquipmentSlot.LEGS.getIndex();
+    public static int bootSlot		    = EquipmentSlot.FEET.getIndex();
+    public static int offHandSlot	    = EquipmentSlot.OFFHAND.getIndex();
+    public static int mainHandSlot	    = EquipmentSlot.MAINHAND.getIndex();
+    public static int animalArmorSlot	= EquipmentSlot.BODY.getIndex();
+    public static int saddleSlot    	= EquipmentSlot.SADDLE.getIndex();
 
     //Important Player UUIDs
     public static String tmgUUID	= "ee1b5154-53c7-43df-99d3-4e8a7bac6d03";
