@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.themastergeneral.ctdcore</groupId>
+  <artifactId>ctd-core-forge</artifactId>
+  <versioning>
+    <latest>1.21-2.6.3b</latest>
+    <release>1.21-2.6.3b</release>
+    <versions>
+      <version>1.21-2.6.3b</version>
+    </versions>
+    <lastUpdated>20260112193915</lastUpdated>
+  </versioning>
+</metadata>
