@@ -6,3 +6,5 @@ CTD Core is NOT a core mod. Its actually just a library mod... I know, how misle
 
 # Official Links
 [![Available on Github!](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact-minimal/available/github_vector.svg)](https://github.com/MasterGeneral156/CTD-Core) [![Available on CurseForge!](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/curseforge_vector.svg)](https://www.curseforge.com/minecraft/mc-mods/ctd-core) [![Available on CurseForge!](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/compact/available/modrinth_vector.svg)](https://modrinth.com/mod/ctd-core)
+
+***MasterGeneral's mods are also hosted on his mirror [located here](https://694272r.chickenkiller.com/mcmodsrepo/).***
