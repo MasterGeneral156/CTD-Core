@@ -97,4 +97,26 @@ public class EntityHelper {
     {
         return isMasterGeneral(player.getStringUUID());
     }
+
+    /**
+     * Tests the UUID to see if its REALLY the Sunny boi...
+     * @param String playerUUID
+     * @return bool
+     * @since 26.1-snapshot-2.9.4
+     */
+    public static boolean isSunnyBoi(String playerUUID)
+    {
+        return (playerUUID == CTDConstants.sunnyUUID);
+    }
+
+    /**
+     * Tests the Player Entity to see if its REALLY Sunny boi...
+     * @param Player player
+     * @return bool
+     * @since 26.1-snapshot-2.9.4
+     */
+    public static boolean isSunnyBoi(Player player)
+    {
+        return isSunnyBoi(player.getStringUUID());
+    }
 }

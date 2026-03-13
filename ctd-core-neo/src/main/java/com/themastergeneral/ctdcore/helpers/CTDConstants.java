@@ -42,8 +42,9 @@ public class CTDConstants {
     public static int saddleSlot    	= EquipmentSlot.SADDLE.getIndex();
 
     //Important Player UUIDs
-    public static String tmgUUID	= "ee1b5154-53c7-43df-99d3-4e8a7bac6d03";
-    public static String tmgAltUUID	= "2d2c2552-01bf-42fb-86cb-d788cb66ffb2";
+    public static String tmgUUID	    = "ee1b5154-53c7-43df-99d3-4e8a7bac6d03";   //TheMasterGeneral
+    public static String tmgAltUUID	    = "2d2c2552-01bf-42fb-86cb-d788cb66ffb2";   //ThePurpleGeneral
+    public static String sunnyUUID      = "656fbf9e-ebe1-4340-b219-e06470dc5dd0";   //SunnConure
 
     //Creative Durability
     public static int creativeDurability = Short.MAX_VALUE;
