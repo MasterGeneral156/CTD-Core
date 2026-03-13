@@ -30,6 +30,8 @@ package com.themastergeneral.ctdcore.helpers;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
+import java.util.Objects;
+
 public class EntityHelper {
 
     /**
@@ -84,7 +86,7 @@ public class EntityHelper {
      */
     public static boolean isMasterGeneral(String playerUUID)
     {
-        return ((playerUUID == CTDConstants.tmgUUID) || (playerUUID == CTDConstants.tmgAltUUID));
+        return ((Objects.equals(playerUUID, CTDConstants.tmgUUID)) || (Objects.equals(playerUUID, CTDConstants.tmgAltUUID)));
     }
 
     /**
@@ -106,7 +108,7 @@ public class EntityHelper {
      */
     public static boolean isSunnyBoi(String playerUUID)
     {
-        return (playerUUID == CTDConstants.sunnyUUID);
+        return (Objects.equals(playerUUID, CTDConstants.sunnyUUID));
     }
 
     /**
