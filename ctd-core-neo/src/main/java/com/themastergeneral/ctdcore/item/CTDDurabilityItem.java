@@ -56,7 +56,6 @@ public class CTDDurabilityItem extends CTDItem {
         super(new Properties().durability(durability).stacksTo(1));
     }
 
-    @Override
     /*@Override
     public ItemStack getCraftingRemainder(ItemStack itemStack)
     {
@@ -66,7 +65,6 @@ public class CTDDurabilityItem extends CTDItem {
         else
         {
             if (stack.getMaxDamage() != CTDConstants.creativeDurability)
-                stack.hurtAndBreak(1, null, stack.getEquipmentSlot());
                 stack.hurtAndBreak(1, null, Objects.requireNonNull(stack.getEquipmentSlot()));
             return stack.copy();
         }
