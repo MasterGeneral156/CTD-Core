@@ -78,10 +78,17 @@ public class CTDDurabilityItem extends CTDItem {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack stack, Item.TooltipContext p_333372_, List<Component> tooltip, TooltipFlag flagIn) {
 		if (stack.isDamageableItem()) {
-			if (Screen.hasShiftDown())
-				tooltip.add(ModUtils.displayString("Durability: " + ModUtils.returnFormattedNumber(stack.getDamageValue()) + "/" + ModUtils.returnFormattedNumber(stack.getMaxDamage())));
-			else
-				tooltip.add(ModUtils.displayString("Durability: " + ModUtils.returnShortenedNumber(stack.getDamageValue()) + "/" + ModUtils.returnShortenedNumber(stack.getMaxDamage())));
+			int remaining = stack.getMaxDamage() - stack.getDamageValue();
+
+			if (Screen.hasShiftDown()) {
+				tooltip.add(ModUtils.displayString("Durability: "
+						+ ModUtils.returnFormattedNumber(remaining) + "/"
+						+ ModUtils.returnFormattedNumber(stack.getMaxDamage())));
+			} else {
+				tooltip.add(ModUtils.displayString("Durability: "
+						+ ModUtils.returnShortenedNumber(remaining) + "/"
+						+ ModUtils.returnShortenedNumber(stack.getMaxDamage())));
+			}
 		}
 	}
 	
