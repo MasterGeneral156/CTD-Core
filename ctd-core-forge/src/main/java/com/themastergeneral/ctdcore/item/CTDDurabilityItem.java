@@ -28,9 +28,16 @@ package com.themastergeneral.ctdcore.item;
 
 import com.themastergeneral.ctdcore.helpers.CTDConstants;
 
+import com.themastergeneral.ctdcore.helpers.ModUtils;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
+
+import java.util.Objects;
+import java.util.function.Consumer;
 
 public class CTDDurabilityItem extends CTDItem {
 
@@ -78,4 +85,21 @@ public class CTDDurabilityItem extends CTDItem {
 		else
 			return false;
     }
+
+	@Override
+	public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipAdder, TooltipFlag flag) {
+		if (stack.isDamageableItem()) {
+			int remaining = stack.getMaxDamage() - stack.getDamageValue();
+
+			if (ModUtils.isShiftDown()) {
+				tooltipAdder.accept(ModUtils.displayString("Durability: "
+						+ ModUtils.returnFormattedNumber(remaining) + "/"
+						+ ModUtils.returnFormattedNumber(stack.getMaxDamage())));
+			} else {
+				tooltipAdder.accept(ModUtils.displayString("Durability: "
+						+ ModUtils.returnShortenedNumber(remaining) + "/"
+						+ ModUtils.returnShortenedNumber(stack.getMaxDamage())));
+			}
+		}
+	}
 }
