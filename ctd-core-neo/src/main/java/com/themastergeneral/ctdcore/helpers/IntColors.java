@@ -52,9 +52,9 @@ public class IntColors {
     public static final int PINK = 0xF38BAA;
 
     /**
-     * Constants for colors that are visually similar to pre World of Color.
+     * Constants for colors that are visually similar to Notch's OG colors
      * @return int RGB Color Code
-     * @since 26.1-snapshot-2.9.5
+     * @since 26.1-snapshot-2.9.4
      */
     public static class NotchStyle {
         public static final int WHITE = 0xFFFFFF;
