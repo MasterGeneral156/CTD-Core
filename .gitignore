@@ -24,3 +24,5 @@ logs/*
 
 # Files from Forge MDK
 forge*changelog.txt
+/ctd-core-forge/mcmodsrepo
+/ctd-core-neo/mcmodsrepo
