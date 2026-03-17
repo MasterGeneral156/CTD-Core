@@ -31,6 +31,7 @@ import com.mojang.logging.LogUtils;
 import com.themastergeneral.ctdcore.helpers.ModUtils;
 
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 
@@ -41,9 +42,9 @@ public class CTDCore {
 	public static CTDCore instance;
 	public static final Logger LOGGER = LogUtils.getLogger();
 
-	public CTDCore(IEventBus modEventBus) {
+	public CTDCore(IEventBus modEventBus, ModContainer modContainer) {
 		instance = this;
-        modEventBus.addListener(this::setup);
+        //modEventBus.addListener(this::setup);
     }
 	
 	private void setup(final FMLCommonSetupEvent event)
