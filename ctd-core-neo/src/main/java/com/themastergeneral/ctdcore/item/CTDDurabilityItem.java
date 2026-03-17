@@ -57,6 +57,7 @@ public class CTDDurabilityItem extends CTDItem {
     }
 
     @Override
+    /*@Override
     public ItemStack getCraftingRemainder(ItemStack itemStack)
     {
         ItemStack stack = itemStack.copy();
@@ -68,7 +69,7 @@ public class CTDDurabilityItem extends CTDItem {
                 stack.hurtAndBreak(1, null, stack.getEquipmentSlot());
             return stack.copy();
         }
-    }
+    }*/
 
     @Override
     public boolean hasCustomEntity(ItemStack stack)
