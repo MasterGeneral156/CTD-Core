@@ -30,6 +30,7 @@ package com.themastergeneral.ctdcore.helpers;
 import java.text.NumberFormat;
 
 import net.minecraft.SharedConstants;
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.neoforged.fml.loading.FMLLoader;
@@ -163,5 +164,14 @@ public class ModUtils
 		bar.append("§r]");
 
 		return bar.toString();
+	}
+
+	/**
+	 * Check to see if the player is holding shift/crouch
+	 * @return boolean
+	 * @since 1.21.11-2.9.4
+	 */
+	public static boolean isShiftDown() {
+		return Minecraft.getInstance().options.keyShift.isDown();
 	}
 }
