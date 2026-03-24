@@ -26,3 +26,4 @@ logs/*
 forge*changelog.txt
 /ctd-core-forge/mcmodsrepo
 /ctd-core-neo/mcmodsrepo
+*.exe.stackdump
