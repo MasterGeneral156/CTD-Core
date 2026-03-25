@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.21
+	Project:	CTD Core 26.1
 	File:		com.themastergeneral.ctdcore.helpers.EntityHelper
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2025 TheMasterGeneral
+				Copyright (c) 2026 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +29,8 @@ package com.themastergeneral.ctdcore.helpers;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+
+import java.util.Objects;
 
 public class EntityHelper {
 
@@ -99,5 +101,27 @@ public class EntityHelper {
 	public static boolean isMasterGeneral(Player player)
 	{
 		return isMasterGeneral(player.getStringUUID());
+	}
+
+	/**
+	 * Tests the UUID to see if its REALLY the Sunny boi...
+	 * @param String playerUUID
+	 * @return bool
+	 * @since 26.1-snapshot-2.9.5
+	 */
+	public static boolean isSunnyBoi(String playerUUID)
+	{
+		return (Objects.equals(playerUUID, CTDConstants.sunnyUUID));
+	}
+
+	/**
+	 * Tests the Player Entity to see if its REALLY Sunny boi...
+	 * @param Player player
+	 * @return bool
+	 * @since 26.1-snapshot-2.9.5
+	 */
+	public static boolean isSunnyBoi(Player player)
+	{
+		return isSunnyBoi(player.getStringUUID());
 	}
 }

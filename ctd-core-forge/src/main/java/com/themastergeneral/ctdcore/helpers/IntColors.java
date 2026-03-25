@@ -1,11 +1,11 @@
 /**
- *  Project:	CTD Core 1.21
+ *  Project:	CTD Core 26.1
  * 	File:		com.themastergeneral.ctdcore.helpers.IntColors
  * 	Author:		TheMasterGeneral
  * 	Website: 	https://github.com/MasterGeneral156/CTD-Core
  * 	License:	MIT License
  *
- * 				Copyright (c) 2025 TheMasterGeneral
+ * 				Copyright (c) 2026 TheMasterGeneral
  *
  * 				Permission is hereby granted, free of charge, to any person obtaining a copy
  * 				of this software and associated documentation files (the "Software"), to deal
@@ -50,4 +50,28 @@ public class IntColors {
     public static final int PURPLE = 0x8932B8;
     public static final int MAGENTA = 0xC74EBD;
     public static final int PINK = 0xF38BAA;
+
+    /**
+     * Constants for colors that are visually similar to Notch's OG colors
+     * @return int RGB Color Code
+     * @since 26.1-snapshot-2.9.4
+     */
+    public static class NotchStyle {
+        public static final int WHITE = 0xFFFFFF;
+        public static final int LIGHT_GRAY = 0x999999;
+        public static final int GRAY = 0x4C4C4C;
+        public static final int BLACK = 0x191919;
+        public static final int BROWN = 0x664C33;
+        public static final int RED = 0x993333;
+        public static final int ORANGE = 0xD87F33;
+        public static final int YELLOW = 0xE5E533;
+        public static final int LIME = 0x7FCC19;
+        public static final int GREEN = 0x667F33;
+        public static final int CYAN = 0x4C7F99;
+        public static final int LIGHT_BLUE = 0x6699D8;
+        public static final int BLUE = 0x334CB2;
+        public static final int PURPLE = 0x7F3FB2;
+        public static final int MAGENTA = 0xB24CD8;
+        public static final int PINK = 0xF27FA5;
+    }
 }

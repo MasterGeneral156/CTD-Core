@@ -1,11 +1,11 @@
 /*
-	Project:	CTD Core 1.21
+	Project:	CTD Core 26.1
 	File:		com.themastergeneral.ctdcore.helpers.CTDConstants
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
 
-				Copyright (c) 2025 TheMasterGeneral
+				Copyright (c) 2026 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -42,8 +42,9 @@ public class CTDConstants {
     public static int saddleSlot    	= EquipmentSlot.SADDLE.getIndex();
 
     //Important Player UUIDs
-    public static String tmgUUID	= "ee1b5154-53c7-43df-99d3-4e8a7bac6d03";
-    public static String tmgAltUUID	= "2d2c2552-01bf-42fb-86cb-d788cb66ffb2";
+    public static String tmgUUID	    = "ee1b5154-53c7-43df-99d3-4e8a7bac6d03";
+    public static String tmgAltUUID	    = "2d2c2552-01bf-42fb-86cb-d788cb66ffb2";
+    public static String sunnyUUID      = "656fbf9e-ebe1-4340-b219-e06470dc5dd0";   //SunnConure
 
     //Creative Durability
     public static int creativeDurability = Short.MAX_VALUE;

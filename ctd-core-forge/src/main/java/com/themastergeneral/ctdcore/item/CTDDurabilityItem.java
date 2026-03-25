@@ -1,10 +1,10 @@
 /*
-	Project:	CTD Core 1.21
+	Project:	CTD Core 26.1
 	File:		CTDDurabilityItem.java
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
 	License:	MIT License
-				Copyright (c) 2025 TheMasterGeneral
+				Copyright (c) 2026 TheMasterGeneral
 				
 				Permission is hereby granted, free of charge, to any person obtaining a copy
 				of this software and associated documentation files (the "Software"), to deal
@@ -28,9 +28,16 @@ package com.themastergeneral.ctdcore.item;
 
 import com.themastergeneral.ctdcore.helpers.CTDConstants;
 
+import com.themastergeneral.ctdcore.helpers.ModUtils;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
+
+import java.util.function.Consumer;
 
 public class CTDDurabilityItem extends CTDItem {
 
@@ -49,8 +56,8 @@ public class CTDDurabilityItem extends CTDItem {
         super(new Properties().durability(durability).stacksTo(1));
     }
 
-	@Override
-	public ItemStack getCraftingRemainder(ItemStack itemStack)
+	/*@Override
+	public ItemStackTemplate getCraftingRemainder(ItemStack itemStack)
     {
 		ItemStack stack = itemStack.copy();
 		if(stack.getDamageValue() == stack.getMaxDamage())
@@ -61,7 +68,7 @@ public class CTDDurabilityItem extends CTDItem {
 				stack.hurtAndBreak(1, null, stack.getEquipmentSlot());
 			return stack.copy();
 		}
-    }
+    }*/
 
 	@Override
 	public boolean hasCustomEntity(ItemStack stack)
@@ -78,4 +85,21 @@ public class CTDDurabilityItem extends CTDItem {
 		else
 			return false;
     }
+
+	@Override
+	public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltipAdder, TooltipFlag flag) {
+		if (stack.isDamageableItem()) {
+			int remaining = stack.getMaxDamage() - stack.getDamageValue();
+
+			if (ModUtils.isShiftDown()) {
+				tooltipAdder.accept(ModUtils.displayString("Durability: "
+						+ ModUtils.returnFormattedNumber(remaining) + "/"
+						+ ModUtils.returnFormattedNumber(stack.getMaxDamage())));
+			} else {
+				tooltipAdder.accept(ModUtils.displayString("Durability: "
+						+ ModUtils.returnShortenedNumber(remaining) + "/"
+						+ ModUtils.returnShortenedNumber(stack.getMaxDamage())));
+			}
+		}
+	}
 }
