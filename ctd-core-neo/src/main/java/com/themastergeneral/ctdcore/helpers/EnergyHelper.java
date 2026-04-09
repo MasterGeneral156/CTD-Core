@@ -1,6 +1,6 @@
 package com.themastergeneral.ctdcore.helpers;
 /*
-	Project:	CTD Core 26.1
+	Project:	CTD Core 26.1.1
 	File:		com.themastergeneral.ctdcore.helpers.EnergyHelper
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
