@@ -1,6 +1,5 @@
-package com.themastergeneral.ctdcore.helpers;
 /*
-	Project:	CTD Core 26.1.1
+	Project:	CTD Core 26.2
 	File:		com.themastergeneral.ctdcore.helpers.EnergyHelper
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
@@ -26,6 +25,8 @@ package com.themastergeneral.ctdcore.helpers;
 				OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 				SOFTWARE.
 */
+package com.themastergeneral.ctdcore.helpers;
+
 public class EnergyHelper {
 
     /**

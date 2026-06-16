@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 26.1.1
+	Project:	CTD Core 26.2
 	File:		com.themastergeneral.ctdcore.item.CTDConsumableItem
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
