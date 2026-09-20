@@ -20,10 +20,28 @@ build
 # other
 eclipse
 run
-logs/*
+*.log
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
 
-# Files from Forge MDK
-forge*changelog.txt
-/ctd-core-forge/mcmodsrepo
-/ctd-core-neo/mcmodsrepo
-*.exe.stackdump
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build\
+\.gradle\*
+
+# other
+/.eclipse/
+runs
+*.log
+*.launch
