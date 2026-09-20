@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 26.2
+	Project:	CTD Core 26.3
 	File:		com.themastergeneral.ctdcore.helpers.CTDConstants
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
