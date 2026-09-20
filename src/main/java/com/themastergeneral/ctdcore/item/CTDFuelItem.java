@@ -1,5 +1,5 @@
 /*
-	Project:	CTD Core 26.2
+	Project:	CTD Core 26.3
 	File:		com.themastergeneral.ctdcore.item.CTDFuelItem
 	Author:		TheMasterGeneral
 	Website: 	https://github.com/MasterGeneral156/CTD-Core
@@ -29,43 +29,39 @@ package com.themastergeneral.ctdcore.item;
 
 import javax.annotation.Nullable;
 
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CookingFuel;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.level.block.entity.FuelValues;
+import net.minecraft.world.level.storage.loot.providers.number.floats.ContextFloatProviders;
+import net.minecraft.world.level.storage.loot.providers.number.floats.ResolvableFloat;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt;
 
 public class CTDFuelItem extends CTDItem {
 
-	private final int burnTicks;
-
 	public CTDFuelItem(ResourceKey<Item> key, Properties properties, int burnTicks)
 	{
-		super(key, properties);
-		this.burnTicks = burnTicks;
+		super(key, properties.component(DataComponents.COOKING_FUEL,
+				new CookingFuel(new ResolvableInt.Constant(burnTicks), ResolvableFloat.fromKey(ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER))));
 	}
 
     public CTDFuelItem(Properties properties, int burnTicks)
     {
-        super(properties);
-        this.burnTicks = burnTicks;
+        super(properties.component(DataComponents.COOKING_FUEL,
+				new CookingFuel(new ResolvableInt.Constant(burnTicks), ResolvableFloat.fromKey(ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER))));
     }
 
 	public CTDFuelItem(ResourceKey<Item> key, int burnTicks)
 	{
-		super(key, new Properties().setId(key));
-		this.burnTicks = burnTicks;
+		super(key, new Properties().setId(key).component(DataComponents.COOKING_FUEL,
+				new CookingFuel(new ResolvableInt.Constant(burnTicks), ResolvableFloat.fromKey(ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER))));
 	}
 
 	public CTDFuelItem(ResourceKey<Item> key, int maxStackSize, int burnTicks)
 	{
-		super(key, new Properties().stacksTo(maxStackSize).setId(key));
-		this.burnTicks = burnTicks;
-	}
-
-	@Override
-	public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType, FuelValues fuelValues)
-	{
-		return this.burnTicks;
+		super(key, new Properties().stacksTo(maxStackSize).setId(key).component(DataComponents.COOKING_FUEL,
+				new CookingFuel(new ResolvableInt.Constant(burnTicks), ResolvableFloat.fromKey(ContextFloatProviders.COOKING_DEFAULT_SPEED_MULTIPLIER))));
 	}
 }
