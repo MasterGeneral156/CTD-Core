@@ -80,10 +80,7 @@ public class CTDDurabilityItem extends CTDItem {
     public boolean isFoil(ItemStack stack) {
         if (stack.isEnchanted())
             return true;
-        else if (stack.getMaxDamage() == CTDConstants.creativeDurability)
-            return true;
-        else
-            return false;
+        else return stack.getMaxDamage() == CTDConstants.creativeDurability;
     }
 
     @Override
