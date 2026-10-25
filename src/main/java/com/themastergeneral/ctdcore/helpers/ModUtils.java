@@ -60,6 +60,16 @@ public class ModUtils
 	{
 		return Component.translatable(string);
 	}
+
+	/**
+	 * Helper function to display a string translation key as a component, including arguments.
+	 * @param string
+	 * @return Translatable Component
+	 * @since 26.3-2.9.7
+	 */
+	public static MutableComponent displayTranslation(String string, Object... args) {
+		return Component.translatable(string, args);
+	}
 	
 	/**
 	 * Makes the input number into a friendly readable number (IE: 1K, 200K, 3M, etc.)

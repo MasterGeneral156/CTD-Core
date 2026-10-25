@@ -92,13 +92,17 @@ public class CTDDurabilityItem extends CTDItem {
             int remaining = stack.getMaxDamage() - stack.getDamageValue();
 
             if (ModUtils.isShiftDown()) {
-                tooltipAdder.accept(ModUtils.displayString("Durability: "
-                        + ModUtils.returnFormattedNumber(remaining) + "/"
-                        + ModUtils.returnFormattedNumber(stack.getMaxDamage())));
+                tooltipAdder.accept(ModUtils.displayTranslation(
+                        "tooltip.ctdcore.durability",
+                        ModUtils.returnFormattedNumber(remaining),
+                        ModUtils.returnFormattedNumber(stack.getMaxDamage())
+                ));
             } else {
-                tooltipAdder.accept(ModUtils.displayString("Durability: "
-                        + ModUtils.returnShortenedNumber(remaining) + "/"
-                        + ModUtils.returnShortenedNumber(stack.getMaxDamage())));
+                tooltipAdder.accept(ModUtils.displayTranslation(
+                        "tooltip.ctdcore.durability",
+                        ModUtils.returnShortenedNumber(remaining),
+                        ModUtils.returnShortenedNumber(stack.getMaxDamage())
+                ));
             }
         }
     }
